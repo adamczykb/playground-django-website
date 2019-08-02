@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>{% block title %}Strona Główna przedszkola
+        {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}{% endblock %}</title>
+    <link href="{% static "style.css" %}" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8"/>
+    <script src="{% static "js/index.js" %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        {% block style %}
+
+        {% endblock %}
+
+        .zeby {
+            background-image: url("{% get_media_prefix %}toolbar_png/section_notch_topc.png");
+            width: 100%;
+            height: 8px;
+            background-repeat: repeat-x;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .logo {
+            background-image: url("{% get_media_prefix %}template jpg/logo.png");
+        }
+
+        .mySlides #rightarr {
+            background-image: url("{% get_media_prefix %}svg/next2ri.svg");
+        }
+
+        .mySlides #leftarr {
+            background-image: url("{% get_media_prefix %}svg/next2le.svg");
+        }
+
+        #nav .middle #buttonvav {
+            background-image: url("{% get_media_prefix %}svg/menu2.svg");
+        }
+    </style>
+</head>
+<body>
+<div id="info">
+    <div class="middle">
+        {% if user.is_authenticated %}
+            <div class="flexmid">Witamy Cię <b style="color: #8bfcff">{{ user.get_short_name }}</b></div>
+        {% else %}
+            <div class="inmiddle">
+                <div class="flexmid"><img src="{% get_media_prefix %}svg/phone.svg"/>
+                    <p>8801 234 567 890</p></div>
+                <div class="flexmid"><img src="{% get_media_prefix %}svg/contacts.svg"/>
+                    <p><a href="mailto:bartoszadamczyk3@gmail.com">bartoszadamczyk3@gmail.com</a></p></div>
+                <div class="flexmid"><a href="https://goo.gl/maps/umH2G7msGQKiE53g8"><img
+                        src="{% get_media_prefix %}svg/home.svg"/>
+                    <p>ul. Piastów 3c/24</p></a></div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+<div id="nav">
+    <div class="middle">
+        <div class="logo"></div>
+        <div class="links">
+            <div class="element"><span>Strona Główna</span>
+                <div class="dropdown-content">
+                    <a href="#">Kadra</a>
+                    <a href="#">Kadra 2</a>
+                </div>
+            </div>
+            <div class="element"><span>Oferta</span></div>
+            <div class="element"><span>Galeria</span></div>
+            <div class="element"><span>Kontakt</span></div>
+            {% if user.is_authenticated %}
+                <div class="element"><span>Panel</span>
+                    <div class="dropdown-content">
+                        <a href="/grupa/">Grupa</a>
+                        <a href="/accounts/password_change/">Zmień hasło</a>
+                        {% if user.is_staff %}
+                            <a href="/admin">Zarządzaj</a>
+                        {% endif %}
+                        <a href="/accounts/logout/">Wyloguj się</a>
+                    </div>
+                </div>
+            {% else %}<a href="/accounts/login">
+                <div class="element"><span>Zaloguj się</span></div>
+            </a>{% endif %}
+        </div>
+        <div id="buttonvav" onclick="expand()"></div>
+    </div>
+    <div id="rest"></div>
+</div>
+<div class="zeby"></div>
+{% block content %}
+
+{% endblock %}
+<div style="width: 100%;height:7px; background-image: url({% static 'section_notch_bottom.png' %}); background-repeat: repeat-x;"></div>
+<div class="footer">
+    <div style="height: 200px;margin: 20px;width: 200px;background-color: black"></div>
+    <hr class="hrfooter">
+    <div class="concact"><h1 style="margin-top: -10px">PRZEDSZKOLEXYZ</h1>
+        <p style="font-family: 'Lato'">Tutaj beda dane adresowe!</p></div>
+
+</div>
+<div style="width: 100%;padding-bottom: 10px;float: right;background-color: #5db4e2;right: 10px;color: white;text-align: end;padding-right: 10px;">
+    Made by: <b style="color: #8bfcff">Bartosz Adamczyk</b></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Logowanie{% endblock %}
+{% block style %}
+    @media only screen and (max-width: 700px) {
+
+    #content-container {
+    padding-top: 70px;
+    }
+
+    }
+    .label-danger{
+    background-color:#f20d0daa;
+    text-align:center;
+    padding:20px;
+    font-family:'Lato';
+    margin-top: 0px;
+    }
+    .btn{
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size:12px;
+    font-weight: bold;
+    line-height: 0.6;
+    padding: 10px;
+    background-color:#42698b;
+    }
+{% endblock %}
+{% block content %}
+    <div id="content-container" class="container p-none">
+        {% if form.errors %}
+            <p class=" label label-danger">
+                Twoje dane logowania nie są poprawne &#128543; <br>
+                Spróbuj ponownie.
+            </p>
+            <div class="box"
+                 style="display: flex;justify-content: center;padding-top: 20px;padding-bottom: 70px; flex-wrap: wrap;">
+        {% else %}
+            <div class="box"
+                 style="display: flex;justify-content: center;padding-top: 70px;padding-bottom: 70px; flex-wrap: wrap;">
+        {% endif %}
+
+        {% if user.is_authenticated %}
+            <h1 style="color:#42698b;">Jesteś już zalogowany</h1>
+        {% else %}
+            <p style="font-size: xx-large; color:#42698b; padding-left: 10px;padding-right: 10px;">Logowanie do
+                panelu rodzica</p>
+            <hr style="margin-left:10px;margin-right:10px;border: 0px;border-left: 4px dashed #bec8d2;">
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <table class="table">
+                    <tr>
+                        <td><input id="id_username" name="username" placeholder="Nick"
+                                   type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="id_password" name="password" placeholder="Hasło"
+                                   type="password" class="form-control"></td>
+                    </tr>
+                </table>
+
+                <input type="submit" value="Zaloguj"
+                       class="btn btn-primary pull-right" style="margin-left: 3px;"/>
+                <input type="hidden" name="next" value="{{ next }}"/>
+            </form>
+        {% endif %}
+        </div>
+        </div>
+{% endblock content %}
