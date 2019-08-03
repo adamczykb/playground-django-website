@@ -23,7 +23,7 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ("kategoria",)
     list_display = ('nazwa_elementu', 'nazwa_uzytkownika_elementu', "kategoria")
     summernote_fields = '__all__'
-    pass
+
 
 
 @admin.register(Strona)
@@ -44,3 +44,15 @@ class Aktualnosci(SummernoteModelAdmin, admin.ModelAdmin):
     summernote_fields = '__all__'
     list_display = ("tytul", "important", "visible")
     list_filter = ("important", "visible", "data")
+
+
+@admin.register(PodElementy)
+class PodElementy(admin.ModelAdmin):
+    list_display = ('powiazanie_z_elementem', 'tytul', 'link_do_strony')
+    list_filter = ('powiazanie_z_elementem',)
+
+    def link_do_strony(self, obj):
+        return obj.Strona.nazwa_podreczna
+
+    def powiazanie_z_elementem(self, obj):
+        return obj.PodElementy.tytul

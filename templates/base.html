@@ -47,12 +47,12 @@
         {% else %}
             <div class="inmiddle">
                 <div class="flexmid"><img src="{% get_media_prefix %}svg/phone.svg"/>
-                    <p>8801 234 567 890</p></div>
+                    <p>{{ toptel }}</p></div>
                 <div class="flexmid"><img src="{% get_media_prefix %}svg/contacts.svg"/>
-                    <p><a href="mailto:bartoszadamczyk3@gmail.com">bartoszadamczyk3@gmail.com</a></p></div>
+                    <p><a href="mailto:{{ topmail }}">{{ topmail }}</a></p></div>
                 <div class="flexmid"><a href="https://goo.gl/maps/umH2G7msGQKiE53g8"><img
                         src="{% get_media_prefix %}svg/home.svg"/>
-                    <p>ul. Piastów 3c/24</p></a></div>
+                    <p>{{ topul }}</p></a></div>
             </div>
         {% endif %}
     </div>
@@ -61,15 +61,26 @@
     <div class="middle">
         <div class="logo"></div>
         <div class="links">
-            <div class="element"><span>Strona Główna</span>
-                <div class="dropdown-content">
-                    <a href="#">Kadra</a>
-                    <a href="#">Kadra 2</a>
-                </div>
+            {% for i in nav %}
+                {% if forloop.counter0 == 0 %}
+
+                        <div class="element"><a href="/" style="margin-top: 23px; color: inherit;"><span>{{ i.0 }}</span></a>
+
+                {% else %}
+                    <div class="element"><span>{{ i.0 }}</span>
+                {% endif %}
+            <div class="dropdown-content">
+
+                {% for j in i %}
+                    {% if  forloop.counter0  == 0 %}
+                    {% else %}
+                        <a href="/str/{{ j.3 }}">{{ j.1 }}</a>
+                    {% endif %}
+                {% endfor %}
             </div>
-            <div class="element"><span>Oferta</span></div>
-            <div class="element"><span>Galeria</span></div>
-            <div class="element"><span>Kontakt</span></div>
+
+            </div>
+            {% endfor %}
             {% if user.is_authenticated %}
                 <div class="element"><span>Panel</span>
                     <div class="dropdown-content">
@@ -81,13 +92,46 @@
                         <a href="/accounts/logout/">Wyloguj się</a>
                     </div>
                 </div>
-            {% else %}<a href="/accounts/login">
-                <div class="element"><span>Zaloguj się</span></div>
-            </a>{% endif %}
+            {% else %}
+                <a href="/accounts/login">
+                    <div class="element"><span>Zaloguj się</span></div>
+                </a>
+            {% endif %}
         </div>
         <div id="buttonvav" onclick="expand()"></div>
     </div>
-    <div id="rest"></div>
+    <div id="rest">
+          {% for i in nav %}
+              <div class="elementmo" onclick="expandmenu({{ forloop.counter }})"><span>{{ i.0 }}</span>
+                  <div id="no{{ forloop.counter }}"  class="dropdown-contentmo">
+
+                {% for j in i %}
+                    {% if  forloop.counter0  == 0 %}
+                    {% else %}
+                       <div style="clear: both"> <a href="/str/{{ j.3 }}">{{ j.1 }}</a></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            </div>
+            {% endfor %}
+    {% if user.is_authenticated %}
+                <div class="elementmo" onclick="expandmenu(5)"><span>Panel</span>
+                    <div id="no5" class="dropdown-contentmo">
+                        <div style="clear: both"><a href="/grupa/">Grupa</a></div>
+                            <div style="clear: both"><a href="/accounts/password_change/">Zmień hasło</a></div>
+                        {% if user.is_staff %}
+                            <div style="clear: both"><a href="/admin">Zarządzaj</a></div>
+                        {% endif %}
+                            <div style="clear: both"><a href="/accounts/logout/">Wyloguj się</a></div>
+                    </div>
+                </div>
+            {% else %}
+                <a href="/accounts/login">
+                    <div style="clear: both"><div class="elementmo"><span>Zaloguj się</span></div></div>
+                </a>
+            {% endif %}
+    </div>
 </div>
 <div class="zeby"></div>
 {% block content %}
@@ -97,8 +141,8 @@
 <div class="footer">
     <div style="height: 200px;margin: 20px;width: 200px;background-color: black"></div>
     <hr class="hrfooter">
-    <div class="concact"><h1 style="margin-top: -10px">PRZEDSZKOLEXYZ</h1>
-        <p style="font-family: 'Lato'">Tutaj beda dane adresowe!</p></div>
+    <div class="concact"><h1 style="margin-top: -10px; text-align: center">{{ footer.1.0 }}</h1>
+        <div style="font-family: 'Lato'">{% autoescape off %}{{ footer.0.0 }}{% endautoescape %}</div></div>
 
 </div>
 <div style="width: 100%;padding-bottom: 10px;float: right;background-color: #5db4e2;right: 10px;color: white;text-align: end;padding-right: 10px;">

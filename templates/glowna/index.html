@@ -2,33 +2,21 @@
 {% load static %}
 {% block content %}
     <div class="slider">
-        <div class="mySlides"
-             style="display: block; background-image:url('{% get_media_prefix %}template jpg/template.jpg');">
-            <div id="leftarr" onclick="plusDivs(-1)"></div>
-            <div class="slider_con"><h1>Lorem ipsum carbonara</h1></div>
-            <div id="rightarr" onclick="plusDivs(1)"></div>
-        </div>
-        <div class="mySlides" style="background-image: url('{% get_media_prefix %}template jpg/template.jpg');">
-            <div id="leftarr" onclick="plusDivs(-1)"></div>
-            <div class="slider_con"></div>
-            <div id="rightarr" onclick="plusDivs(1)"></div>
-        </div>
-        <div class="mySlides" style="background-image: url('{% get_media_prefix %}template jpg/template.jpg');">
-            <div id="leftarr" onclick="plusDivs(-1)"></div>
-            <div class="slider_con"></div>
-            <div id="rightarr" onclick="plusDivs(1)"></div>
-        </div>
-        <div class="mySlides" style="background-image: url('{% get_media_prefix %}template jpg/template.jpg');">
-            <div id="leftarr" onclick="plusDivs(-1)"></div>
-            <div class="slider_con"></div>
-            <div id="rightarr" onclick="plusDivs(1)"></div>
-        </div>
-        <div class="info_near_slider">
-            <div class="slid_con_text"><h1>Lorem ipsum carbonara</h1><a href="#">
-                <div class="button">Czytaj dalej</div>
-            </a></div>
-        </div>
-
+        {% for i in slider %}
+            <div class="mySlides"
+                 style=" {% if forloop.counter0 == 0 %}display: block{% else %}display: none{% endif %}; background-image:url('{% get_media_prefix %}{{ i.1 }}');">
+                <div id="leftarr" onclick="plusDivs(-1)"></div>
+                <a href="/site/{{ i.2 }}">
+                    <div class="slider_con"><h1>{{ i.0 }}</h1></div>
+                </a>
+                <div id="rightarr" onclick="plusDivs(1)"></div>
+            </div>
+            <div class="info_near_slider" style="{% if forloop.counter0 == 0 %}{% else %}display: none{% endif %}">
+                <div class="slid_con_text"><h1>{{ i.0 }}</h1><a href="/site/{{ i.2 }}">
+                    <div class="button">Czytaj dalej</div>
+                </a></div>
+            </div>
+        {% endfor %}
     </div>
     <div class="content_main">
         <div id="col_inn">
@@ -41,36 +29,43 @@
                 </svg>
                 <div class="gridbox">
                     <div class="infoboxbottom" style="background-color: #3c4ac98f">
-                        <div class="title" style="background-color: #3c4ac9aa">Pies</div>
-
-                        <div class="elementi">ggg</div>
-                        <div class="elementi">dddd</div>
-                        <div class="elementi">ssss</div>
+                        <div class="title" style="background-color: #3c4ac9aa">{{ box.0.1 }}</div>
+                        {% for i in box.0 %}
+                            {% if forloop.counter0 < 2 %}{% else %}
+                                <a href="/site/{{ i.1 }}">
+                                    <div class="elementi">{{ i.0 }}</div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="infoboxbottom" style="background-color: #a63cc98f">
-                        <div class="title" style="background-color: #a63cc9aa">Pies</div>
-
-                        <div class="elementi">dddd</div>
-                        <div class="elementi">fff</div>
-                        <div class="elementi">ggg</div>
+                        <div class="title" style="background-color: #a63cc9aa">{{ box.1.1 }}</div>
+                        {% for i in box.1 %}
+                            {% if forloop.counter0 < 2 %}{% else %}
+                                <a href="/site/{{ i.1 }}">
+                                    <div class="elementi">{{ i.0 }}</div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="infoboxbottom" style="background-color: #c9663c8f">
-                        <div class="title"  style="background-color: #c9663caa">Pies</div>
-
-                        <div class="elementi">aaa</div>
-                        <div class="elementi">ssss</div>
-                        <div class="elementi">dddd</div>
-                        <div class="elementi">ffff</div>
+                        <div class="title" style="background-color: #c9663caa">{{ box.2.1 }}</div>
+                        {% for i in box.2 %}
+                            {% if forloop.counter0 < 2 %}{% else %}
+                                <a href="/site/{{ i.1 }}">
+                                    <div class="elementi">{{ i.0 }}</div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-
             <div>
-                <div class="button_aktual"
-                     style=" background-image: url('/media/svg/previous.svg');   margin-top: 15px;"></div>
+                <div id="leftarrin" class="button_aktual" onclick="nextactu(-9,{{ infobox|length }})"
+                     style="display: none; background-image: url('/media/svg/previous.svg');   margin-top: 15px;"></div>
                 <h1 class="h1style">Aktualności</h1>
-                <div class="button_aktual"
-                     style="background-image: url('/media/svg/next.svg'); right: 0;margin-top: -65px;"></div>
+                <div id="rightarrin" class="button_aktual" onclick="nextactu(9,{{ infobox|length }})"
+                     style=" {% if infobox|length < 11 %}display:none;{% endif %}background-image: url('/media/svg/next.svg'); right: 0;margin-top: -65px;"></div>
                 <svg viewBox="0 0 311.1 14.4">
                     <polyline points="0.7,13.7 13.4,0.8 25.3,12.8 37.2,0.8 49,12.8 60.9,0.8 72.8,12.8 84.7,0.8 96.6,12.8 108.4,0.8
 	120.3,12.8 132.2,0.8 144,12.8 155.9,0.8 167.7,12.8 179.8,0.7 191.7,12.8 203.6,0.8 215.4,12.8 227.3,0.8 239.2,12.8 251.1,0.8
@@ -78,15 +73,23 @@
                 </svg>
                 <p class="h1style" style="font-size: 20px; padding-top: 0px">Wiadomości z naszego przedszkola</p>
                 <div class="gridbox">
-                    <div class="infobox"><div class="image" style="background-color: #a64ee6"></div><div class="title">TEST</div><div class="time">12-343-3343</div> </div>
-                    <div class="infobox"><div class="image" style="background-color: #a64ee6"></div><div class="title">TEST</div><div class="time">12-343-3343</div> </div>
-                    <div class="infobox"><div class="image" style="background-color: #a64ee6"></div><div class="title">TEST</div><div class="time">12-343-3343</div> </div>
-                    <div class="infobox"><div class="image" style="background-color: #a64ee6"></div><div class="title">TEST</div><div class="time">12-343-3343</div> </div>
-                    <div class="infobox"><div class="image" style="background-color: #a64ee6"></div><div class="title">TEST</div><div class="time">12-343-3343</div> </div>
+                {% if infobox|length == 0 %}
+                    <h1 style="margin-top: 40px; color: #42698b">Brak postów</h1>
+                {% else %}
+                    {% for i in infobox %}
+                        {% if forloop.counter0 < 499 %}
+                    <a class="aktual" href="/aktualnosci/{{ i.0 }}" style="{% if forloop.counter0 >= 9 %} display: none; {% endif %}"> <div class="infobox" style="{% if i.4 == True %}background-color: rgba(146,149,13,0.56);{% endif %}" >
+                        <div class="image" style="background-color: #a64ee6; background-image: url('{% get_media_prefix %}{{ i.6 }}');"></div>
+                        <div class="title">{{ i.1 }}</div>
+                        <div class="time">{{ i.2 }}</div>
+                    </div>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
                 </div>
             </div>
         </div>
-
     </div>
 
 {% endblock %}

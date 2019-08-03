@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    .inner_aktualnosci{
+        width:89%;
+        padding-top:20px;
+    padding-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    .header{
+        width:100%;
+    background-color:blue;
+    }
+    @media only screen and (max-width: 700px) {
+    .header{
+        padding-top:80px;
+    }
+    .inner_aktualnosci{
+        width:100%;
+
+    }
+    }
+{% endblock %}
+{% block content %}
+    <div class="header"><h1 style="padding: 35px 20px;color:white; margin: 0;text-align: center">{{ result.0.1 }}</h1> </div>
+    <div class="inner_aktualnosci"></div>
+
+{% endblock %}

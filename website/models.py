@@ -22,7 +22,8 @@ class Strona(models.Model):
     tresc = models.TextField(default="")
     odnosnik_do_galerii = models.ForeignKey('gallery.Album', verbose_name="Nazwa albumu", blank=True,
                                             on_delete=models.DO_NOTHING, null=True)
-
+    statyczna=models.BooleanField(default=False, verbose_name="Jeżeli strona jest statyczna",blank=True)
+    link_statyczny=models.CharField(max_length=255, verbose_name="Link do strony statycznej",blank=True,default='')
     class Meta:
         verbose_name_plural = "Podstrony www"
 
@@ -33,7 +34,7 @@ class Elementy(models.Model):
 
     ID = models.AutoField(primary_key=True, editable=False)
     nazwa_elementu = models.CharField(max_length=255, verbose_name="Element statyczny strony głównej "
-                                                                   "!nie zmieniać!")
+                                                                   "!nie zmieniać!", editable=False)
     nazwa_uzytkownika_elementu = models.CharField(max_length=255, verbose_name="Napis na elemencie",blank=True)
     kategoria= models.CharField(max_length=255, verbose_name="Kategoria elementu")
     class Meta:
@@ -44,14 +45,14 @@ class PodElementy(models.Model):
     def __str__(self):
         return 'dodatek: ' + self.tytul
 
-    ID_pod = models.AutoField(primary_key=True, editable=False, default=1)
+    ID_pod = models.AutoField(primary_key=True, editable=False)
     tytul = models.CharField(max_length=255, verbose_name="Napis na elemencie")
     powiazanie_z_elementem = models.ForeignKey(to=Elementy, on_delete=models.DO_NOTHING,
                                                verbose_name="Z jakim elementem wspolpracuje")
     link_do_strony = models.ForeignKey(to=Strona, on_delete=models.DO_NOTHING)
     zdjecie = models.ImageField(upload_to='images/slider/', verbose_name="Wybor zdjecia (Tylko dla slidera)",
                                 blank=True)
-
+    order=models.IntegerField(default=0,verbose_name="Kolejność")
     class Meta:
         verbose_name_plural = "Elementy użytkownika"
 
@@ -60,15 +61,15 @@ class Aktualnosci(models.Model):
     def __str__(self):
         return 'post: ' + self.tytul
 
-    ID = models.AutoField(primary_key=True, editable=False, default=1)
+    ID = models.AutoField(primary_key=True, editable=False)
     tytul = models.CharField(max_length=255, verbose_name="Tytul")
     data = models.DateTimeField(editable=True, verbose_name="Data wydania", null=True)
     tresc = models.TextField(default="")
     odnosnik_do_galerii = models.ForeignKey('gallery.Album', verbose_name="Nazwa albumu", blank=True,
-                                            on_delete=models.DO_NOTHING)
+                                            on_delete=models.DO_NOTHING, null=True)
     important = models.BooleanField(default=False, verbose_name="Komunikat")
     zdjecie = ProcessedImageField(upload_to='images/aktualnosci/',
-                                  processors=[ResizeToFill(360, 200)],
+                                  processors=[ResizeToFill(800, 450)],
                                   format='JPEG',
                                   options={'quality': 100}, null=True)
     visible = models.BooleanField(default=True, verbose_name="Widoczne")
