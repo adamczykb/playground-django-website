@@ -14,3 +14,4 @@ rjsmin==1.1.0
 six==1.12.0
 sqlparse==0.3.0
 django-imagekit
+django-admin-sortable2

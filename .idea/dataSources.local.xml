@@ -12,7 +12,7 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>postgres</user-name>
-      <introspection-schemas>@:@</introspection-schemas>
+      <introspection-schemas>@:@|przedszkole:*</introspection-schemas>
     </data-source>
   </component>
 </project>

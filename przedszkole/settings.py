@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'website',
     'gallery',
     'imagekit',
+    'adminsortable2',
 ]
 
 MIDDLEWARE = [
@@ -136,9 +137,10 @@ STATICFILES_DIRS = [
     '/home/joulupukki/Desktop/assty/',
 ]
 GALLERY_FOOTER_INFO = "Smerfowe przedszkole"
-GALLERY_FOOTER_EMAIL = "xyz@mail.com"
+GALLERY_FOOTER_EMAIL = ""
 GALLERY_THEME_COLOR = "white"
 
 LOGIN_REDIRECT_URL = "/grupa/"
 LOGOUT_REDIRECT_URL = '/'
 SUMMERNOTE_THEME = 'bs4'
+GALLERY_LOGO_PATH=''

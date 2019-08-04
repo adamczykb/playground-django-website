@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    {{ result.0.1 }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
+    {{ result.0.2 }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
 {% endblock %}
 {% block style %}
     body{
@@ -36,9 +36,8 @@
     width:83%;
     max-width:1640px;
     height:300px;
-    background-color:#42698b;
+    background-color:#428b4f;
     position:relative;
-    box-shadow: inset 0px -99px 81px -71px rgba(41,41,41,1);
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,14 +89,13 @@
     }
 {% endblock %}
 {% block content %}
-    <div class="akt_image" style="{% if result.0.6 %} background-image: url('{% get_media_prefix %}{{ result.0.6 }}') {% else %}height: auto;{% endif %}">
+    <div class="akt_image" style="height: auto;">
         <div class="headerakt"><h1
-                style="padding: 20px 20px; padding-bottom: 10px;color:white; margin: 0">{{ result.0.1 }}</h1>
-            <div class="data">{{ result.0.2 }}</div>
+                style="padding: 20px 20px; padding-bottom: 10px;color:white; margin: 0; text-align: center">{{ result.0.2 }}</h1>
         </div>
     </div>
     <div class="inner_aktualnosci">
-        <div style="padding: 0 10px;">{% autoescape off %}{{ result.0.3 }}{% endautoescape %}</div>
+        <div style="padding: 0 10px;">{% autoescape off %}{{ result.0.4 }}{% endautoescape %}</div>
         {% if result.0.5 != None %}<a href="/gallery/album/{{ result.0.5 }}/{{ result.0.5 }}">
             <div class="gallery">
                 {% for i in  gallery %}

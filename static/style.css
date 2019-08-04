@@ -212,9 +212,9 @@ body {
     width: 65%;
     background-size: cover;
     background-position: center;
-    -webkit-box-shadow: 2px 8px 4px 0px rgba(88, 88, 88, 0.75);
-    -moz-box-shadow: 2px 8px 4px 0px rgba(88, 88, 88, 0.75);
-    box-shadow: 2px 8px 4px 0px rgba(88, 88, 88, 0.75);
+    -webkit-box-shadow: 2px 3.5px 4px 0px rgba(88, 88, 88, 0.75);
+    -moz-box-shadow: 2px 3.5px 4px 0px rgba(88, 88, 88, 0.75);
+    box-shadow: 2px 3.5px 4px 0px rgba(88, 88, 88, 0.75);
 
 }
 
@@ -350,7 +350,7 @@ body {
 
 .infobox .time {
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 11px;
     padding: 10px;
     padding-top: 0px;
     font-style: italic;

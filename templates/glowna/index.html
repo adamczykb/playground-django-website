@@ -78,8 +78,8 @@
                 {% else %}
                     {% for i in infobox %}
                         {% if forloop.counter0 < 499 %}
-                    <a class="aktual" href="/aktualnosci/{{ i.0 }}" style="{% if forloop.counter0 >= 9 %} display: none; {% endif %}"> <div class="infobox" style="{% if i.4 == True %}background-color: rgba(146,149,13,0.56);{% endif %}" >
-                        <div class="image" style="background-color: #a64ee6; background-image: url('{% get_media_prefix %}{{ i.6 }}');"></div>
+                    <a class="aktual" href="/aktualnosci/{{ i.0 }}" style="{% if forloop.counter0 >= 9 %} display: none; {% endif %}"> <div class="infobox" style="{% if i.4 == True %}background-color: #FF7900;{% endif %}" >
+                        {% if i.6 != '' %}<div class="image" style="background-color: #a64ee6; background-image: url('{% get_media_prefix %}{{ i.6 }}');"></div>{% endif %}
                         <div class="title">{{ i.1 }}</div>
                         <div class="time">{{ i.2 }}</div>
                     </div>

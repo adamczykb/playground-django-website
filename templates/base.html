@@ -59,7 +59,7 @@
 </div>
 <div id="nav">
     <div class="middle">
-        <div class="logo"></div>
+       <a href="/" style="height: 100%"><div class="logo"></div></a>
         <div class="links">
             {% for i in nav %}
                 {% if forloop.counter0 == 0 %}
@@ -74,7 +74,7 @@
                 {% for j in i %}
                     {% if  forloop.counter0  == 0 %}
                     {% else %}
-                        <a href="/str/{{ j.3 }}">{{ j.1 }}</a>
+                        <a href="/site/{{ j.3 }}">{{ j.1 }}</a>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -108,7 +108,7 @@
                 {% for j in i %}
                     {% if  forloop.counter0  == 0 %}
                     {% else %}
-                       <div style="clear: both"> <a href="/str/{{ j.3 }}">{{ j.1 }}</a></div>
+                       <div style="clear: both"> <a href="/site/{{ j.3 }}">{{ j.1 }}</a></div>
                     {% endif %}
                 {% endfor %}
             </div>

@@ -69,9 +69,8 @@ class Aktualnosci(models.Model):
                                             on_delete=models.DO_NOTHING, null=True)
     important = models.BooleanField(default=False, verbose_name="Komunikat")
     zdjecie = ProcessedImageField(upload_to='images/aktualnosci/',
-                                  processors=[ResizeToFill(800, 450)],
                                   format='JPEG',
-                                  options={'quality': 100}, null=True)
+                                  options={'quality': 100}, null=True, blank=True)
     visible = models.BooleanField(default=True, verbose_name="Widoczne")
 
     class Meta:
