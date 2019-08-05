@@ -431,13 +431,16 @@ body {
 .dropdown-contentmo {
     display: none;
 }
- #nav #rest {
-     display: none;
- }
- .elementmo{
-     display: none;
- }
-@media only screen and (max-width: 1200px)  {
+
+#nav #rest {
+    display: none;
+}
+
+.elementmo {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
     #info .middle {
         width: 100%;
     }
@@ -476,7 +479,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1200px)  {
+@media only screen and (min-width: 1200px) {
     .mySlides #leftarr {
         background-size: 50%;
         width: 5%;
@@ -496,20 +499,45 @@ body {
 
 /*"Open Sans",Arial,sans-serif*/
 
-@media only screen and  (orientation: portrait){
+@media only screen and  (orientation: portrait) {
+    .concact h1{
+        font-size: 6vw;
+    }
+    .concact div{
+        font-size: 4vw;
+    }
+    .infobox{
+        width: 80vw;
+    }
+    .infobox .time{
+        font-size: 2vw;
+    }
+    .infoboxbottom{
+        width: 80vw;
+        height: 90vh;
+    }
+    .infoboxbottom .title{
+        font-size: 6vw;
+    }
+    .h1style {
+        font-size: 7vw;
+    }
 
-    .info_near_slider{
+    .info_near_slider {
         display: none;
     }
-    .slider_con h1{
-        font-size: 5vh;
+
+    .slider_con h1 {
+        font-size: 8vw;
         display: block;
     }
+
     .slider_con {
         display: flex;
         align-items: center;
         justify-content: left;
     }
+
     #nav {
         position: fixed;
         z-index: 3;
@@ -586,19 +614,20 @@ body {
     .concact {
         text-align: center;
     }
+
     .elementmo {
         display: block;
-    width: 100%;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 6vw;
-    color: #42698b;
-}
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 6vw;
+        color: #42698b;
+    }
 
-.elementmo span {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+    .elementmo span {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
 }
