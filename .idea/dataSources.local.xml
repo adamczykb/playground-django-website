@@ -14,10 +14,14 @@
       <user-name>postgres</user-name>
       <introspection-schemas>@:@|przedszkole:*</introspection-schemas>
     </data-source>
-    <data-source name="@192.168.0.21" uuid="eeaa8eef-9a5e-476d-bdc9-3d19ab063e08">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+    <data-source name="przedszkole@192.168.0.21" uuid="eeaa8eef-9a5e-476d-bdc9-3d19ab063e08">
+      <database-info product="PostgreSQL" version="11.4 (Raspbian 11.4-1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.4" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
     </data-source>
   </component>
 </project>

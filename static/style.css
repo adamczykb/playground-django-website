@@ -497,7 +497,7 @@ body {
 
 /*"Open Sans",Arial,sans-serif*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) or  (orientation: landscape) {
 
     #nav {
         position: fixed;
