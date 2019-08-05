@@ -562,6 +562,7 @@ body {
         position: fixed;
         z-index: 3;
         height: 11vw;
+        
     }
 
     #nav #rest {
@@ -658,6 +659,12 @@ body {
 
     }
     .infoboxbottom .elementi {
-    font-size: 5vw;
+    font-size: 4.5vw;
+        padding-top: 1vh;
+padding-bottom: 1vh;
+padding-left: 3vw;
+    }
+    .infoboxbottom .title{
+        margin-top: 2vh;
     }
 }
