@@ -344,7 +344,6 @@ body {
     color: whitesmoke;
     font-size: 23px;
     padding: 10px;
-    font-weight: bold;
 }
 
 .infobox .time {
@@ -569,7 +568,7 @@ body {
     }
 
     .infobox .title {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     .infobox .time {
@@ -591,6 +590,7 @@ body {
     }
     .h1style p{
         font-size: 4vw;
+        display: none;
     }
     .info_near_slider {
         display: none;
