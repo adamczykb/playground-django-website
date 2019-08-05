@@ -77,7 +77,7 @@ svg {
 
 #nav .middle {
     width: 90%;
-    height: 80px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -86,8 +86,8 @@ svg {
 
 #nav .middle #buttonvav {
     right: 20px;
-    height: 40px;
-    width: 40px;
+    height: 5vh;
+    width: 5vh;
     display: none;
 }
 
@@ -163,7 +163,7 @@ svg {
 }
 
 .dropdown-contentmo a {
-    font-size: 20px;
+    font-size: 3vw;
     color: #448daa;
     clear: both;
     padding-top: 5px;
@@ -276,7 +276,6 @@ body {
 #col_inn {
     width: 100%;
     position: relative;
-    background-color: #f8f8ff;
 }
 
 .h1style {
@@ -438,7 +437,7 @@ body {
  .elementmo{
      display: none;
  }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px)  {
     #info .middle {
         width: 100%;
     }
@@ -477,7 +476,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px)  {
     .mySlides #leftarr {
         background-size: 50%;
         width: 5%;
@@ -497,18 +496,31 @@ body {
 
 /*"Open Sans",Arial,sans-serif*/
 
-@media only screen and (max-width: 700px) or  (orientation: landscape) {
+@media only screen and  (orientation: portrait){
 
+    .info_near_slider{
+        display: none;
+    }
+    .slider_con h1{
+        font-size: 5vh;
+        display: block;
+    }
+    .slider_con {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
     #nav {
         position: fixed;
         z-index: 3;
+        height: 10vh;
     }
 
     #nav #rest {
         display: none;
         position: fixed;
         width: 100%;
-        height: 89%;
+        height: 90%;
         background-color: #ffffffea;
         clear: both;
         overflow-y: scroll;
@@ -516,13 +528,14 @@ body {
 
     .slider {
         position: relative;
-        padding-top: 80px;
+        padding-top: 10vh;
         z-index: 0;
+        height: 60vh;
     }
 
     .zeby {
         position: fixed !important;
-        margin-top: 80px !important;
+        margin-top: 10vh !important;
     }
 
     #nav .middle {
@@ -579,7 +592,7 @@ body {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-size: 34px;
+    font-size: 6vw;
     color: #42698b;
 }
 

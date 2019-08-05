@@ -36,13 +36,11 @@ function expand() {
     var body = document.body;
     var list = document.getElementById("rest");
     if (list.style.display === "block") {
-        y.style.position = "";
         z[0].style.display = "block";
         list.style.display = "none";
         body.style.overflowY = "scroll";
 
     } else {
-        y.style.height = "auto";
         z[0].style.display = "none";
         list.style.display = "block";
         body.style.overflowY = "hidden";
