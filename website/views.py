@@ -83,7 +83,7 @@ def aktualnosci(request, nr_art):
         photos = list(cursor.fetchall())
 
     else:
-        photos=''
+        photos=False
     return render(request, 'aktualnosci/aktualnosci.html',
            {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'footer': footer,'result':result, 'gallery': photos})
 
@@ -102,7 +102,7 @@ def site(request,nr_site):
         photos = list(cursor.fetchall())
 
     else:
-        photos = ''
+        photos = False
     return render(request, 'podstrony/podstrona.html',
                   {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'footer': footer,
                    'result': result, 'gallery': photos})
