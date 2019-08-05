@@ -520,11 +520,11 @@ body {
     }
 
     .infobox .title {
-        font-size: 4vw;
+        font-size: 7vw;
     }
 
     .infobox .time {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .infoboxbottom {
@@ -541,7 +541,7 @@ body {
         font-size: 10vw;
     }
     .h1style p{
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .info_near_slider {
         display: none;
