@@ -561,7 +561,7 @@ body {
     #nav {
         position: fixed;
         z-index: 3;
-        height: 13vh;
+        height: 12vh;
 
     }
 
@@ -577,14 +577,14 @@ body {
 
     .slider {
         position: relative;
-        padding-top: 13vh;
+        padding-top: 12vh;
         z-index: 0;
         height: 60vh;
     }
 
     .zeby {
         position: fixed !important;
-        margin-top: 13vh !important;
+        margin-top: 12vh !important;
     }
 
     #nav .middle {
