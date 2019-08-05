@@ -73,9 +73,10 @@
             <div class="dropdown-content">
 
                 {% for j in i %}
+
                     {% if  forloop.counter0  == 0 %}
                     {% else %}
-                        <a href="/site/{{ j.3 }}">{{ j.1 }}</a>
+                        <a href="/site/{{ j.4 }}">{{ j.1 }}</a>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -109,7 +110,7 @@
                 {% for j in i %}
                     {% if  forloop.counter0  == 0 %}
                     {% else %}
-                       <div style="clear: both"> <a href="/site/{{ j.3 }}">{{ j.1 }}</a></div>
+                       <div style="clear: both"> <a href="/site/{{ j.4 }}">{{ j.1 }}</a></div>
                     {% endif %}
                 {% endfor %}
             </div>
