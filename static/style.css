@@ -534,13 +534,15 @@ body {
     }
 
     .infoboxbottom .title {
-        font-size: 6vw;
-    }
-
-    .h1style {
         font-size: 7vw;
     }
 
+    .h1style {
+        font-size: 10vw;
+    }
+    .h1style p{
+        font-size: 3vw;
+    }
     .info_near_slider {
         display: none;
     }
@@ -654,5 +656,8 @@ body {
     .footer{
         flex-direction: column;
 
+    }
+    .infoboxbottom .elementi {
+    font-size: 5vw;
     }
 }
