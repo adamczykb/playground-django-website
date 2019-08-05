@@ -78,12 +78,13 @@ def aktualnosci(request, nr_art):
     cursor = connection.cursor()
     cursor.execute("select * from public.website_aktualnosci where \"ID\"="+ str(nr_art))
     result= cursor.fetchall()
-    if(result[0][5] != False):
+    if(result[0][5] != False and result[0][5] != None):
         cursor.execute("select s.data from public.gallery_album_images e left join public.gallery_image s on e.image_id = s.id where album_id=" + str(result[0][5]))
         photos = list(cursor.fetchall())
 
     else:
-        photos=False
+        photos=''
+
     return render(request, 'aktualnosci/aktualnosci.html',
            {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'footer': footer,'result':result, 'gallery': photos})
 
@@ -95,14 +96,15 @@ def site(request,nr_site):
     cursor = connection.cursor()
     cursor.execute("select * from public.website_strona where \"ID\"=" + str(nr_site))
     result = cursor.fetchall()
-    if (result[0][5] != False):
+    if (result[0][5] != False and result[0][5] != None):
         cursor.execute(
             "select s.data from public.gallery_album_images e left join public.gallery_image s on e.image_id = s.id where album_id=" + str(
                 result[0][5]))
         photos = list(cursor.fetchall())
 
     else:
-        photos = False
+        photos = ''
+
     return render(request, 'podstrony/podstrona.html',
                   {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'footer': footer,
                    'result': result, 'gallery': photos})
