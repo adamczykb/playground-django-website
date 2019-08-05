@@ -18,5 +18,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/przedszkole</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="@192.168.0.21" uuid="eeaa8eef-9a5e-476d-bdc9-3d19ab063e08">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.0.21:5432/</jdbc-url>
+    </data-source>
   </component>
 </project>

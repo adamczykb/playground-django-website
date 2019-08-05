@@ -14,5 +14,10 @@
       <user-name>postgres</user-name>
       <introspection-schemas>@:@|przedszkole:*</introspection-schemas>
     </data-source>
+    <data-source name="@192.168.0.21" uuid="eeaa8eef-9a5e-476d-bdc9-3d19ab063e08">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+    </data-source>
   </component>
 </project>
