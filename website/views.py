@@ -78,8 +78,8 @@ def aktualnosci(request, nr_art):
     cursor = connection.cursor()
     cursor.execute("select * from public.website_aktualnosci where \"ID\"="+ str(nr_art))
     result= cursor.fetchall()
-    if(result[0][5] != False and result[0][5] != None):
-        cursor.execute("select s.data from public.gallery_album_images e left join public.gallery_image s on e.image_id = s.id where album_id=" + str(result[0][5]))
+    if(result[0][7] != False and result[0][7] != None):
+        cursor.execute("select s.data from public.gallery_album_images e left join public.gallery_image s on e.image_id = s.id where album_id=" + str(result[0][7]))
         photos = list(cursor.fetchall())
 
     else:
@@ -96,10 +96,10 @@ def site(request,nr_site):
     cursor = connection.cursor()
     cursor.execute("select * from public.website_strona where \"ID\"=" + str(nr_site))
     result = cursor.fetchall()
-    if (result[0][5] != False and result[0][5] != None):
+    if (result[0][7] != False and result[0][7] != None):
         cursor.execute(
             "select s.data from public.gallery_album_images e left join public.gallery_image s on e.image_id = s.id where album_id=" + str(
-                result[0][5]))
+                result[0][7]))
         photos = list(cursor.fetchall())
 
     else:
