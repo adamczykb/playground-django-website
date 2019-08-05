@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Logowanie{% endblock %}
 {% block style %}
-   @media only screen and  (orientation: portrait){
+    @media only screen and  (orientation: portrait){
     .box p{
     text-align: center;
     margin-top: 0;
+    font-size:7vw !important;
 
+    }
+    .btn{
+    width:90vw;
     }
     #conta{
     flex-direction: column;
@@ -19,15 +23,27 @@
     display:none;
     }
     .box{
-        padding-top:10vh !important;
+
     flex-direction: column;
 
     }
     form{
-        clear:both;
+    clear:both;
     margin-left:auto;
     margin-right:auto;
     }
+    form input{
+
+    width: 90vw;
+
+    height: 6vw;
+
+    font-size: 4vw !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    }
+    } .box p{
+    font-size: xx-large;
     }
     .label-danger{
     background-color:#f20d0daa;
@@ -48,7 +64,7 @@
     background-color:#42698b;
     }
     .box{
-    display: flex;justify-content: center;padding-top: 20px;padding-bottom: 70px; flex-wrap: wrap;
+    display: flex;justify-content: center;padding-top: 70px;padding-bottom: 70px; flex-wrap: wrap;
 
     }
 {% endblock %}
@@ -69,9 +85,9 @@
         {% if user.is_authenticated %}
             <h1 style="color:#42698b;">Jesteś już zalogowany</h1>
         {% else %}
-            <p style="font-size: xx-large; color:#42698b; padding-left: 10px;padding-right: 10px;">Logowanie do
+            <p style="color:#42698b; padding-left: 10px;padding-right: 10px;">Logowanie do
                 panelu rodzica</p>
-            <hr id="hr"style="margin-left:10px;margin-right:10px;border: 0px;border-left: 4px dashed #bec8d2;">
+            <hr id="hr" style="margin-left:10px;margin-right:10px;border: 0px;border-left: 4px dashed #bec8d2;">
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 <table class="table">
@@ -86,7 +102,7 @@
                 </table>
 
                 <input type="submit" value="Zaloguj"
-                       class="btn btn-primary pull-right" style="margin-left: 3px;"/>
+                       class="btn btn-primary pull-right" style="margin-left: 3px; width: 100%;"/>
                 <input type="hidden" name="next" value="{{ next }}"/>
             </form>
         {% endif %}

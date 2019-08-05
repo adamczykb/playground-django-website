@@ -86,8 +86,8 @@ svg {
 
 #nav .middle #buttonvav {
     right: 20px;
-    height: 5vh;
-    width: 5vh;
+    height: 6vw;
+    width: 6vw;
     display: none;
 }
 
@@ -559,7 +559,7 @@ body {
     #nav {
         position: fixed;
         z-index: 3;
-        height: 10vh;
+        height: 11vw;
     }
 
     #nav #rest {
@@ -574,14 +574,14 @@ body {
 
     .slider {
         position: relative;
-        padding-top: 10vh;
+        padding-top: 11vw;
         z-index: 0;
         height: 60vh;
     }
 
     .zeby {
         position: fixed !important;
-        margin-top: 10vh !important;
+        margin-top: 11vw !important;
     }
 
     #nav .middle {
