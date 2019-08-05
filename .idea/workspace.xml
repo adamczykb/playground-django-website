@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7c89144-bb07-4777-85e6-a031819a05d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/387befaa-2ee6-4e53-9f7c-3c614c9cbaee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/387befaa-2ee6-4e53-9f7c-3c614c9cbaee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/387befaa-2ee6-4e53-9f7c-3c614c9cbaee/storage_v2/_src_/database/przedszkole.2yhMBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/387befaa-2ee6-4e53-9f7c-3c614c9cbaee/storage_v2/_src_/database/przedszkole.2yhMBg/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="b7c89144-bb07-4777-85e6-a031819a05d0" name="Default Changelist" comment="poprawki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/podstrony/podstrona.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/podstrony/podstrona.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,16 +119,6 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="przedszkole@192.168.0.21" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="przedszkole: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="website_aktualnosci: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
@@ -138,18 +127,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-277">
-              <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/glowna/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -177,23 +154,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="107" column="85" lean-forward="true" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
+            <state relative-caret-position="165">
+              <caret line="11" column="92" selection-start-line="11" selection-start-column="92" selection-end-line="11" selection-end-column="92" />
               <folding>
-                <element signature="e#2328#2352#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <entry file="das://eeaa8eef-9a5e-476d-bdc9-3d19ab063e08/database/przedszkole/schema/public/table/website_podelementy">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="c212b014-3038-45c0-a3fa-b4fce958342d">
+              <filtering>
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
@@ -208,11 +187,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="564" column="8" selection-start-line="564" selection-start-column="8" selection-end-line="564" selection-end-column="8" />
+            <state relative-caret-position="300">
+              <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -242,9 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.infobox .time</find>
-      <find>flex</find>
-      <find>font</find>
       <find>str</find>
       <find>str/</find>
       <find>width: 100%;height:7px;</find>
@@ -263,7 +239,6 @@
       <find>.headerakt</find>
       <find>.akt_image</find>
       <find>20px</find>
-      <find>#nav .middle #buttonvav</find>
       <find>auto</find>
       <find>10vh</find>
       <find>.box</find>
@@ -272,12 +247,16 @@
       <find>au</find>
       <find>infoboxbottom</find>
       <find>#content-container</find>
+      <find>11vw</find>
+      <find>#nav .middle #buttonvav</find>
+      <find>.buttongal</find>
+      <find>.gallery</find>
     </findStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/static</dir>
       <dir>$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib</dir>
       <dir>$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/static</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -305,16 +284,16 @@
         <option value="$PROJECT_DIR$/website/urls.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/static/js/index.js" />
-        <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/website/migrations/0001_initial.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/387befaa-2ee6-4e53-9f7c-3c614c9cbaee/console.sql" />
         <option value="$PROJECT_DIR$/templates/glowna/index.html" />
         <option value="$PROJECT_DIR$/website/views.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/eeaa8eef-9a5e-476d-bdc9-3d19ab063e08/console.sql" />
+        <option value="$PROJECT_DIR$/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/static/style.css" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/podstrony/podstrona.html" />
         <option value="$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/static/style.css" />
       </list>
     </option>
   </component>
@@ -352,6 +331,12 @@
               <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
               <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
+              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
@@ -541,7 +526,7 @@
       <workItem from="1564933639714" duration="1667000" />
       <workItem from="1564998852613" duration="17251000" />
       <workItem from="1565032853467" duration="483000" />
-      <workItem from="1565033686950" duration="3707000" />
+      <workItem from="1565033686950" duration="6447000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1564871704735</created>
@@ -641,11 +626,25 @@
       <option name="project" value="LOCAL" />
       <updated>1565035703198</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="poprawki">
+      <created>1565037425537</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1565037425537</updated>
+    </task>
+    <task id="LOCAL-00016" summary="poprawki">
+      <created>1565038376520</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1565038376520</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233193000" />
+    <option name="totallyTimeSpent" value="235933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,10 +657,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="0" width="1608" height="866" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21106821" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979424" visible="true" weight="0.21106821" />
+      <window_info id="Structure" order="1" sideWeight="0.5020576" side_tool="true" weight="0.21106821" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32880434" />
@@ -681,7 +679,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32947233" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.038610037" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.12355212" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,13 +695,6 @@
     <SUITE FILE_PATH="coverage/przedszkole$tests.coverage" NAME="tests Coverage Results" MODIFIED="1564846009334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/db/models/fields/related.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/gallery/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1086,23 +1077,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/section_notch_topc.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="das://eeaa8eef-9a5e-476d-bdc9-3d19ab063e08/database/przedszkole/schema/public/table/website_podelementy">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="c212b014-3038-45c0-a3fa-b4fce958342d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="564" column="8" selection-start-line="564" selection-start-column="8" selection-end-line="564" selection-end-column="8" />
+        <state relative-caret-position="300">
+          <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="92" selection-start-line="11" selection-start-column="92" selection-end-line="11" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
