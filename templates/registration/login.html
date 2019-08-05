@@ -1,12 +1,33 @@
 {% extends 'base.html' %}
 {% block title %}Logowanie{% endblock %}
 {% block style %}
-    @media only screen and (max-width: 700px) {
+   @media only screen and  (orientation: portrait){
+    .box p{
+    text-align: center;
+    margin-top: 0;
 
-    #content-container {
-    padding-top: 70px;
     }
+    #conta{
+    flex-direction: column;
 
+    }
+    #content-container {
+    padding-top: 10vh;
+    }
+    #hr{
+
+    display:none;
+    }
+    .box{
+        padding-top:10vh !important;
+    flex-direction: column;
+
+    }
+    form{
+        clear:both;
+    margin-left:auto;
+    margin-right:auto;
+    }
     }
     .label-danger{
     background-color:#f20d0daa;
@@ -26,6 +47,10 @@
     padding: 10px;
     background-color:#42698b;
     }
+    .box{
+    display: flex;justify-content: center;padding-top: 20px;padding-bottom: 70px; flex-wrap: wrap;
+
+    }
 {% endblock %}
 {% block content %}
     <div id="content-container" class="container p-none">
@@ -35,10 +60,10 @@
                 Spróbuj ponownie.
             </p>
             <div class="box"
-                 style="display: flex;justify-content: center;padding-top: 20px;padding-bottom: 70px; flex-wrap: wrap;">
+                 style="">
         {% else %}
             <div class="box"
-                 style="display: flex;justify-content: center;padding-top: 70px;padding-bottom: 70px; flex-wrap: wrap;">
+                 style="">
         {% endif %}
 
         {% if user.is_authenticated %}
@@ -46,7 +71,7 @@
         {% else %}
             <p style="font-size: xx-large; color:#42698b; padding-left: 10px;padding-right: 10px;">Logowanie do
                 panelu rodzica</p>
-            <hr style="margin-left:10px;margin-right:10px;border: 0px;border-left: 4px dashed #bec8d2;">
+            <hr id="hr"style="margin-left:10px;margin-right:10px;border: 0px;border-left: 4px dashed #bec8d2;">
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 <table class="table">

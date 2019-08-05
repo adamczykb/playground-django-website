@@ -440,6 +440,13 @@ body {
     display: none;
 }
 
+#logodown {
+    height: 200px;
+    margin: 20px;
+    width: 200px;
+    background-color: black;
+}
+
 @media only screen and (max-width: 1200px) {
     #info .middle {
         width: 100%;
@@ -500,25 +507,36 @@ body {
 /*"Open Sans",Arial,sans-serif*/
 
 @media only screen and  (orientation: portrait) {
-    .concact h1{
+    .concact h1 {
         font-size: 6vw;
     }
-    .concact div{
-        font-size: 4vw;
-    }
-    .infobox{
-        width: 80vw;
-    }
-    .infobox .time{
+
+    .concact div {
         font-size: 2vw;
     }
-    .infoboxbottom{
+
+    .infobox {
         width: 80vw;
-        height: 90vh;
     }
-    .infoboxbottom .title{
+
+    .infobox .title {
+        font-size: 4vw;
+    }
+
+    .infobox .time {
+        font-size: 2vw;
+    }
+
+    .infoboxbottom {
+        width: 80vw;
+        height: auto;
+        min-height: 50vh;
+    }
+
+    .infoboxbottom .title {
         font-size: 6vw;
     }
+
     .h1style {
         font-size: 7vw;
     }
@@ -629,5 +647,12 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    #logodown{
+        width: 30vw;
+        height: 30vw;
+    }
+    .footer{
+        flex-direction: column;
 
+    }
 }
