@@ -18,7 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
-
+from django.contrib.auth.views import LoginView
 from przedszkole import settings
 from django.contrib.auth import views as auth_views
 
@@ -28,6 +28,7 @@ urlpatterns = [
                   path('summernote/', include('django_summernote.urls')),
                   path('gallery/', include('gallery.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
+                  path('kalendarz/', include('schedule.urls')),
               ] + staticfiles_urlpatterns()
 handler404 = 'website.views.error_404_view'
 if settings.DEBUG:

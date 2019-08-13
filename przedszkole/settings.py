@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'gallery',
     'imagekit',
     'adminsortable2',
+    'schedule',
+'djangobower',
 ]
 
 MIDDLEWARE = [
@@ -51,13 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,spellchecker,paste,searchreplace",
-    'theme': "advanced",
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 10,
-}
+TEMPLATE_CONTEXT_PROCESSORS = ["django.template.context_processors.request",]
 
 ROOT_URLCONF = 'przedszkole.urls'
 
@@ -133,8 +129,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    '/home/joulupukki/Desktop/assty/',
+    os.path.join(BASE_DIR, 'static/'),
 ]
 GALLERY_FOOTER_INFO = "Smerfowe przedszkole"
 GALLERY_FOOTER_EMAIL = ""
@@ -143,4 +138,10 @@ GALLERY_THEME_COLOR = "white"
 LOGIN_REDIRECT_URL = "/grupa/"
 LOGOUT_REDIRECT_URL = '/'
 SUMMERNOTE_THEME = 'bs4'
-GALLERY_LOGO_PATH=''
+GALLERY_LOGO_PATH = ''
+BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'jquery-ui',
+    'bootstrap'
+)

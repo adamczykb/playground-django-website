@@ -60,7 +60,7 @@ def index(request):
 
     return render(request, 'glowna/index.html',
                   {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'slider': slider,
-                   'box': box,'infobox': posts,'footer':footer})
+                   'box': box,'infobox': posts,'footer':footer, 'calendar_slug':'kalendarz'})
 
 
 @login_required()

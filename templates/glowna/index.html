@@ -1,10 +1,22 @@
 {% extends "base.html" %}
+{% load scheduletags %}
 {% load static %}
+{% block script %}
+<script type="text/javascript" src="{% static "jquery/dist/jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "jquery-ui/jquery-ui.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+    <script type="text/javascript" src="{% static "schedule.js" %}"></script>
+    <link rel="stylesheet" href="{% static "schedule.css" %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static "jquery-ui/themes/base/all.css" %}" type="text/css" media="screen">
+    {% include "fullcalendar_script.html" %}
+
+{% endblock %}
 {% block content %}
     <div class="slider">
         {% for i in slider %}
             <div class="mySlides"
-                 style=" {% if forloop.counter0 == 0 %}display: block{% else %}display: none{% endif %}; background-image:url('{% get_media_prefix %}{{ i.1 }}');">
+                 style=" {% if forloop.counter0 == 0 %}display: block{% else %}display: none{% endif %}; background-image:url('
+                         {% get_media_prefix %}{{ i.1 }}');">
                 <div id="leftarr" onclick="plusDivs(-1)"></div>
                 <a href="/site/{{ i.2 }}">
                     <div class="slider_con"><h1>{{ i.0 }}</h1></div>
@@ -73,21 +85,40 @@
                 </svg>
                 <p class="h1style" style="font-size: 20px; padding-top: 0px">Wiadomości z naszego przedszkola</p>
                 <div class="gridbox">
-                {% if infobox|length == 0 %}
-                    <h1 style="margin-top: 40px; color: #42698b">Brak postów</h1>
-                {% else %}
-                    {% for i in infobox %}
-                        {% if forloop.counter0 < 499 %}
-                    <a class="aktual" href="/aktualnosci/{{ i.0 }}" style="{% if forloop.counter0 >= 9 %} display: none; {% endif %}"> <div class="infobox" style="{% if i.4 == True %}background-color: #FF7900;{% endif %}" >
-                        {% if i.5 != '' %}<div class="image" style="background-color: #a64ee6; background-image: url('{% get_media_prefix %}{{ i.5 }}');"></div>{% endif %}
-                        <div class="title">{{ i.1 }}</div>
-                        <div class="time">{{ i.2 }}</div>
-                    </div>
-                        </a>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
+                    {% if infobox|length == 0 %}
+                        <h1 style="margin-top: 40px; color: #42698b">Brak postów</h1>
+                    {% else %}
+                        {% for i in infobox %}
+                            {% if forloop.counter0 < 499 %}
+                                <a class="aktual" href="/aktualnosci/{{ i.0 }}"
+                                   style="{% if forloop.counter0 >= 9 %} display: none; {% endif %}">
+                                    <div class="infobox"
+                                         style="{% if i.4 == True %}background-color: #FF7900;{% endif %}">
+                                        {% if i.5 != '' %}
+                                            <div class="image" style="background-color: #a64ee6; background-image: url('
+                                                    {% get_media_prefix %}{{ i.5 }}');"></div>{% endif %}
+                                        <div class="title">{{ i.1 }}</div>
+                                        <div class="time">{{ i.2 }}</div>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
+            </div>
+            <div id="body">
+                {% if messages %}
+                    <ul id="messages">
+                        {% for message in messages %}
+                            <li id="message_{{ forloop.counter }}"><a href="#"
+                                                                      onclick="$('#message_{{ forloop.counter }}').fadeOut(); return false;">
+                                <small>"clear"</small>
+                            </a> {{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <div id='calendar' style="padding: 9vw; height: 70vw; width: 70vw; margin-left: auto;margin-right: auto;"></div>
+
             </div>
         </div>
     </div>

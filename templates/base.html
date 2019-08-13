@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -8,8 +9,11 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <meta charset="UTF-8"/>
     <script src="{% static "js/index.js" %}"></script>
-<meta name="theme-color" content="#f8f8ff" />
+
+    <meta name="theme-color" content="#f8f8ff"/>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+{% block script %}
+{% endblock %}
     <style>
         {% block style %}
 
@@ -61,12 +65,15 @@
 </div>
 <div id="nav">
     <div class="middle">
-       <a href="/" style="height: 100%"><div class="logo"></div></a>
+        <a href="/" style="height: 100%">
+            <div class="logo"></div>
+        </a>
         <div class="links">
             {% for i in nav %}
                 {% if forloop.counter0 == 0 %}
 
-                        <div class="element"><a href="/" style="margin-top: 23px; color: inherit;"><span>{{ i.0 }}</span></a>
+                    <div class="element">
+                    <a href="/" style="margin-top: 23px; color: inherit;"><span>{{ i.0 }}</span></a>
 
                 {% else %}
                     <div class="element"><span>{{ i.0 }}</span>
@@ -100,55 +107,59 @@
                     <div class="element"><span>Zaloguj się</span></div>
                 </a>
             {% endif %}
+            </div>
+            <div id="buttonvav" onclick="expand()"></div>
         </div>
-        <div id="buttonvav" onclick="expand()"></div>
-    </div>
-    <div id="rest">
-          {% for i in nav %}
-              <div class="elementmo" onclick="expandmenu({{ forloop.counter }})"><span>{{ i.0 }}</span>
-                  <div id="no{{ forloop.counter }}"  class="dropdown-contentmo">
+        <div id="rest">
+            {% for i in nav %}
+                <div class="elementmo" onclick="expandmenu({{ forloop.counter }})"><span>{{ i.0 }}</span>
+                    <div id="no{{ forloop.counter }}" class="dropdown-contentmo">
 
-                {% for j in i %}
-                    {% if  forloop.counter0  == 0 %}
-                    {% else %}
-                       <div style="clear: both"> <a href="/site/{{ j.4 }}">{{ j.1 }}</a></div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+                        {% for j in i %}
+                            {% if  forloop.counter0  == 0 %}
+                            {% else %}
+                                <div style="clear: both"><a href="/site/{{ j.4 }}">{{ j.1 }}</a></div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
 
-            </div>
+                </div>
             {% endfor %}
-    {% if user.is_authenticated %}
+            {% if user.is_authenticated %}
                 <div class="elementmo" onclick="expandmenu(5)"><span>Panel</span>
                     <div id="no5" class="dropdown-contentmo">
                         <div style="clear: both"><a href="/grupa/">Grupa</a></div>
-                            <div style="clear: both"><a href="/accounts/password_change/">Zmień hasło</a></div>
+                        <div style="clear: both"><a href="/accounts/password_change/">Zmień hasło</a></div>
                         {% if user.is_staff %}
                             <div style="clear: both"><a href="/admin">Zarządzaj</a></div>
                         {% endif %}
-                            <div style="clear: both"><a href="/accounts/logout/">Wyloguj się</a></div>
+                        <div style="clear: both"><a href="/accounts/logout/">Wyloguj się</a></div>
                     </div>
                 </div>
             {% else %}
                 <a href="/accounts/login">
-                    <div style="clear: both"><div class="elementmo"><span>Zaloguj się</span></div></div>
+                    <div style="clear: both">
+                        <div class="elementmo"><span>Zaloguj się</span></div>
+                    </div>
                 </a>
             {% endif %}
+        </div>
     </div>
-</div>
-<div class="zeby"></div>
-{% block content %}
+    <div class="zeby"></div>
+    {% block content %}
 
-{% endblock %}
-<div style="width: 100%;height:6px; background-image: url({% static 'section_notch_bottom.png' %}); background-repeat: repeat-x;"></div>
-<div class="footer">
-    <div id="logodown"style=""></div>
-    <hr class="hrfooter">
-    <div class="concact"><h1 style="margin-top: -10px; text-align: center">{{ footer.1.0 }}</h1>
-        <div style="font-family: 'Lato'">{% autoescape off %}{{ footer.0.0 }}{% endautoescape %}</div></div>
+    {% endblock %}
 
-</div>
-<div style="width: 100%;padding-bottom: 10px;float: right;background-color: #5db4e2;right: 10px;color: white;text-align: end;padding-right: 10px;">
-    Made by: <b style="color: #8bfcff">Bartosz Adamczyk</b></div>
+    <div style="width: 100%;height:6px; background-image: url({% static 'section_notch_bottom.png' %}); background-repeat: repeat-x;"></div>
+    <div class="footer">
+        <div id="logodown" style=""></div>
+        <hr class="hrfooter">
+        <div class="concact"><h1 style="margin-top: -10px; text-align: center">{{ footer.1.0 }}</h1>
+            <div style="font-family: 'Lato'">{% autoescape off %}{{ footer.0.0 }}{% endautoescape %}</div>
+        </div>
+
+    </div>
+    <div style="width: 100%;padding-bottom: 10px;float: right;background-color: #5db4e2;right: 10px;color: white;text-align: end;padding-right: 10px;">
+        Made by: <b style="color: #8bfcff">Bartosz Adamczyk</b></div>
 </body>
 </html>
