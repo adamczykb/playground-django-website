@@ -35,7 +35,7 @@ class StronyNaGl(SummernoteModelAdmin, admin.ModelAdmin):
 
 @admin.register(GrupyPrzedszkolne)
 class Grupy(admin.ModelAdmin):
-    filter_horizontal = ('rodzice',)
+    filter_horizontal = ('albumy_zdjeciowe',)
     list_display = ("skrot", "nazwa_grupy", "Liczba_rodzicow")
 
 
@@ -44,6 +44,7 @@ class Aktualnosci(SummernoteModelAdmin, admin.ModelAdmin):
     summernote_fields = '__all__'
     list_display = ("tytul", "important", "visible")
     list_filter = ("important", "visible", "data")
+    filter_horizontal = ('do_kogo',)
 
 
 @admin.register(PodElementy)

@@ -110,7 +110,7 @@ $(document).ready(function() {
             right: 'month,agendaWeek,agendaDay'
         },
         editable: true,
-        eventLimit: true, // allow 'more' link when too many events
+        eventLimit: false, // allow 'more' link when too many events
         selectable: true, //Allows a user to highlight multiple days or timeslots by clicking and dragging.
         selectHelper: true,
         events: "{% url 'api_occurrences' %}?calendar_slug={{calendar_slug}}",
@@ -126,7 +126,7 @@ $(document).ready(function() {
             if(s.indexOf("fc-day-grid-event") < 0){
                 title = element.children().find( '.fc-title' );
                 title.html('<a href="' + getEventViewURL(event) +
-                    '">' + title.html() + '</a>')
+                    '">' + title.html() + '</a>');
                 if(event.editable && "{{ request.get_full_path }}".indexOf("/admin") != 0){
                     time = element.children().find( '.fc-time' );
                     var edit_button = document.createElement("button");

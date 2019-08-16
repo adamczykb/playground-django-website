@@ -1,6 +1,7 @@
 var slideIndex = 1;
 var collapsed = false;
 var actu = 9;
+var gale = 9;
 showDivs(slideIndex);
 expand();
 
@@ -80,4 +81,64 @@ function expandmenu(nr) {
         gets.style.display="none";
     }
 
+}
+function expandgroup(nr) {
+    var gets = document.getElementById("grp"+nr);
+    console.log(nr);
+    if(gets.style.display==="" || gets.style.display==="none"){
+        gets.style.display="block";
+    }else{
+        gets.style.display="none";
+    }
+
+}
+
+
+function nextgal(n, m) {
+    var l = document.getElementById("leftarrin");
+    var r = document.getElementById("rightarrin");
+    var b = document.getElementsByClassName("gale");
+    for (s = gale - 19; s < gale; s++) {
+        if (s < m)
+            b[s].style.display = "none";
+    }
+    gale += n;
+    for (s = gale - 19; s < gale; s++) {
+        if (s < m)
+            b[s].style.display = "block";
+    }
+    if (gale <= 19) {
+        l.style.display = "none";
+    } else {
+        l.style.display = "";
+    }
+    if (gale > m) {
+        r.style.display = "none";
+    } else {
+        r.style.display = "";
+    }
+}
+function nextgal(n, m) {
+    var l = document.getElementById("leftarrin");
+    var r = document.getElementById("rightarrin");
+    var b = document.getElementsByClassName("gale");
+    for (s = gale - 19; s < gale; s++) {
+        if (s < m)
+            b[s].style.display = "none";
+    }
+    gale += n;
+    for (s = gale - 19; s < gale; s++) {
+        if (s < m)
+            b[s].style.display = "block";
+    }
+    if (gale <= 19) {
+        l.style.display = "none";
+    } else {
+        l.style.display = "";
+    }
+    if (gale > m) {
+        r.style.display = "none";
+    } else {
+        r.style.display = "";
+    }
 }

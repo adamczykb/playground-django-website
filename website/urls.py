@@ -6,5 +6,7 @@ urlpatterns = [
     path('', views.index, name="Glowna"),
     path('grupa/',views.panel,name="Panel"),
     path('aktualnosci/<int:nr_art>', views.aktualnosci, name="Posty"),
-    path('site/<int:nr_site>',views.site,name="Strona")
+    path('site/<int:nr_site>',views.site,name="Strona"),
+    path('grupy/<str:grupa>/aktualnosci/',views.grupaAktualnosci),
+    path('grupy/<str:grupa>/galeria/',views.grupaGaleria),
 ]

@@ -13,6 +13,7 @@
     <meta name="theme-color" content="#f8f8ff"/>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 {% block script %}
+
 {% endblock %}
     <style>
         {% block style %}
@@ -29,7 +30,7 @@
         }
 
         .logo {
-            background-image: url("{% get_media_prefix %}template jpg/logo.png");
+            background-image: url("{% static  "templatejpg/logo.png" %}");
         }
 
         .mySlides #rightarr {
@@ -49,18 +50,32 @@
 <div id="info">
     <div class="middle">
         {% if user.is_authenticated %}
-            <div class="flexmid">Witamy Cię <b style="color: #8bfcff">{{ user.get_short_name }}</b></div>
+            <div class="flexmid"><a href="/accounts/logout/">Wyloguj</a></div>
         {% else %}
             <div class="inmiddle">
-                <div class="flexmid"><img src="{% static "/base/phone.svg" %}"/>
+                <div class="flexmid" style="display:flex; justify-content:center;width: 25%;"><img src="{% static "/base/phone.svg" %}"/>
                     <p>{{ toptel }}</p></div>
-                <div class="flexmid"><img src="{% static "/base/contacts.svg" %}"/>
+                <div class="flexmid" style="display:flex; justify-content:center;width: 25%;"><img src="{% static "/base/contacts.svg" %}"/>
                     <p><a href="mailto:{{ topmail }}">{{ topmail }}</a></p></div>
-                <div class="flexmid"><a href="https://goo.gl/maps/umH2G7msGQKiE53g8"><img
+                <div class="flexmid" style="display:flex; justify-content:center;width: 25%;"><a href="https://goo.gl/maps/umH2G7msGQKiE53g8"><img
                         src="{% static "/base/home.svg" %}"/>
                     <p>{{ topul }}</p></a></div>
             </div>
         {% endif %}
+    </div>
+</div>
+<div style="width: 100%; background-color: #5db4e2">
+<div class="slidergorny">
+        {% for i in slidergorny %}
+            <div class="mySlidesGorny"
+                 style=" {% if forloop.counter0 == 0 %}display: block;{% else %}display: none;{% endif %}  background-image:url('{% get_media_prefix %}');">
+                <div id="leftarrgo" onclick="plusDivs(-1)"></div>
+                <a href="/aktualnosci/">
+                    <div class="slider_con"><h1>{{ i.tytul }}</h1></div>
+                </a>
+                <div id="rightarrgo" onclick="plusDivs(1)"></div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 <div id="nav">
@@ -71,26 +86,34 @@
         <div class="links">
             {% for i in nav %}
                 {% if forloop.counter0 == 0 %}
-
-                    <div class="element">
-                    <a href="/" style="margin-top: 23px; color: inherit;"><span>{{ i.0 }}</span></a>
-
+                <div onclick="window.location='/'" class="element"><span>{{ i.0 }}</span>
                 {% else %}
                     <div class="element"><span>{{ i.0 }}</span>
-                {% endif %}
+                    {% endif %}
             <div class="dropdown-content">
-
+                {% if i.0 == "Grupy" %}
+                    {% for g in grupy %}
+                        <div class="grupki">
+                            <a>{{ g.0 }}</a>
+                            <div class="dropdown-content-sub">
+                                <a href="/grupy/{{ g.0 }}/aktualnosci/">Aktualności</a>
+                                <a href="/grupy/{{ g.0 }}/galeria/">Galeria</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
                 {% for j in i %}
-
                     {% if  forloop.counter0  == 0 %}
                     {% else %}
                         <a href="/site/{{ j.4 }}">{{ j.1 }}</a>
                     {% endif %}
                 {% endfor %}
+            {% endif %}
             </div>
 
             </div>
             {% endfor %}
+        <!--
             {% if user.is_authenticated %}
                 <div class="element"><span>Panel</span>
                     <div class="dropdown-content">
@@ -107,25 +130,36 @@
                     <div class="element"><span>Zaloguj się</span></div>
                 </a>
             {% endif %}
+            -->
             </div>
             <div id="buttonvav" onclick="expand()"></div>
         </div>
         <div id="rest">
             {% for i in nav %}
-                <div class="elementmo" onclick="expandmenu({{ forloop.counter }})"><span>{{ i.0 }}</span>
+                <div class="elementmo" ><span onclick="expandmenu({{ forloop.counter }})">{{ i.0 }}</span>
                     <div id="no{{ forloop.counter }}" class="dropdown-contentmo">
+                        {% if i.0 == "Grupy" %}
+                            {% for z in grupy %}
+                             <div style="clear: both;padding-top: 1vh;font-weight: bold;font-family: 'Patrick Hand', cursive;" onclick="expandgroup({{ forloop.counter }})">{{ z.0 }}</div>
+                                <div id="grp{{ forloop.counter }}" style="display: none">
+                                    <div style="clear: both; color:#428b79; font-size: 3vw;"><a href="/grupy/{{ z.0 }}/aktualnosci/">Aktualności</a> </div>
+                                    <div style="clear: both;color:#428b79;font-size: 3vw;"><a href="/grupy/{{ z.0 }}/galeria/">Galeria</a> </div>
+                                </div>
 
+                            {% endfor %}
+                        {% else %}
                         {% for j in i %}
                             {% if  forloop.counter0  == 0 %}
                             {% else %}
                                 <div style="clear: both"><a href="/site/{{ j.4 }}">{{ j.1 }}</a></div>
                             {% endif %}
                         {% endfor %}
+                    {% endif %}
                     </div>
 
                 </div>
             {% endfor %}
-            {% if user.is_authenticated %}
+            <!--{% if user.is_authenticated %}
                 <div class="elementmo" onclick="expandmenu(5)"><span>Panel</span>
                     <div id="no5" class="dropdown-contentmo">
                         <div style="clear: both"><a href="/grupa/">Grupa</a></div>
@@ -143,6 +177,7 @@
                     </div>
                 </a>
             {% endif %}
+            -->
         </div>
     </div>
     <div class="zeby"></div>

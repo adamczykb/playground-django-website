@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'mybase.html' %}
 {% load static %}
 {% block title %}
     {{ result.0.1 }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
@@ -24,11 +24,10 @@
     align-self: flex-end;
     text-align:left;
     padding: 20px 20px; padding-bottom: 10px;color:white; margin: 0;
-    font-size: 3vw;
+    font-size: 2.5vw;
     }
     .data{
     font-size:14px;
-    padding: 8px 20px;
     padding-top:0px;
     width:100%;
     color: white;
@@ -66,11 +65,23 @@
     border-radius:2px;
     background-color:#42698b;
     font-family:'Patrick Hand';
-    font-size:7vh;
+    font-size:4.5vh;
 
     }
     .overgal{
     height: 30vh;clear: both; position: absolute;width: 80%;background-color: #22222266;display: flex;
+    }
+    @media only screen and (max-width: 1200px){
+    .akt_image{
+    width:100%;
+    }
+    .inner_aktualnosci{
+    width:100%;
+    padding: 10px 0px;
+    }
+    .overgal{
+    width:100%;
+    }
     }
     @media only screen and (orientation: portrait) {
     .overgal{
@@ -91,9 +102,9 @@
     }
 {% endblock %}
 {% block content %}
-    <div class="akt_image" style="{% if result.0.6 %} background-image: url('{% get_media_prefix %}{{ result.0.5 }}');height:30vw; {% else %}height: auto;{% endif %}">
+    <div class="akt_image" style="{% if result.0.5 %} background-image: url('{% get_media_prefix %}{{ result.0.5 }}');height:30vw; {% else %}height: auto;{% endif %}">
         <div class="headerakt"><h1
-                style="">{{ result.0.1 }}</h1>
+                style="{% if result.0.6 %}margin-bottom: 0;margin-top: 0{% endif %}">{{ result.0.1 }}</h1>
             <div class="data">{{ result.0.2 }}</div>
         </div>
     </div>

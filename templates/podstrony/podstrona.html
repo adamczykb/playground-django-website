@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'mybase.html' %}
 {% load static %}
 {% block title %}
     {{ result.0.2 }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
@@ -23,8 +23,8 @@
     width:100%;
     align-self: flex-end;
     text-align:left;
-    padding: 20px 20px; padding-bottom: 10px; padding-bottom: 0;color:white; margin: 0; text-align: center;
-    font-size: 3vw;
+    padding: 0 20px;color:white; margin: 0; text-align: center;
+    font-size: 2.5vw;
     }
     .data{
     font-size:14px;
@@ -65,8 +65,17 @@
     border-radius:2px;
     background-color:#42698b;
     font-family:'Patrick Hand';
-    font-size:7vh;
+    font-size:4.5vh;
 
+    }
+    @media only screen and (max-width: 1200px){
+    .akt_image{
+    width:100%;
+    }
+    .inner_aktualnosci{
+    width:100%;
+    padding: 10px 0px;
+    }
     }
     .overgal{
     height: 30vh;clear: both; position: absolute;width: 80%;background-color: #22222266;display: flex;
