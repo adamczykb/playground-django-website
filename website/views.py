@@ -5,7 +5,7 @@ from django.db import connection
 from django.db.models.functions import Lower
 from django.http import HttpResponse
 from django.shortcuts import render
-from schedule.models import Calendar
+from schedule.models import Calendar, Event
 from schedule.periods import Day, Month, Week, Year
 from schedule.settings import (
     CHECK_EVENT_PERM_FUNC, CHECK_OCCURRENCE_PERM_FUNC, EVENT_NAME_PLACEHOLDER,
@@ -167,3 +167,11 @@ def grupaGaleria(request, grupa):
     return render(request, 'podstrony/galeria.html',
                   {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'footer': footer,
                    'grupy': grupy, 'podstrona': grupa,'gal':gal})
+
+
+def event(request, title):
+    art=Aktualnosci.objects.filter(event=Event.objects.get(title=title))
+    if(art.__len__()==0 or art.__len__()>1):
+        return index(request)
+    else:
+        return aktualnosci(request, nr_art=art[0].ID)

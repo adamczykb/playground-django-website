@@ -207,7 +207,6 @@ a {
     text-decoration: none;
     color: #f8f8ff;
 }
-
 .slider {
     width: 100%;
     height: 550px;
@@ -496,10 +495,13 @@ table{
 tr td{
     height: 6vh;
     width: 10%;
+    font-size: 20px;
+
 }
+
 tr th{
     text-align: center;
-    font-size: small;
+    font-size: 30px;
 }
 tr td:first-child{
     display: none;
@@ -820,7 +822,10 @@ td a{
         font-size: 5vw;
     }
     tr th{
-        font-size: 5vw;
+        font-size: 4vw;
+    }
+    tr td{
+        font-size: 3vw;
     }
     svg{
         padding: 0;
