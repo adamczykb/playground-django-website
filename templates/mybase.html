@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <title>{% block title %}Strona Główna przedszkola
+    <title>{% block title %}Strona Główna |
         {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}{% endblock %}</title>
     <link href="{% static "style.css" %}" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
@@ -65,7 +65,7 @@
     </div>
 </div>
 <div style="width: 100%; background-color: #5db4e2">
-<div class="slidergorny">
+<!--<div class="slidergorny">
         {% for i in slidergorny %}
             <div class="mySlidesGorny"
                  style=" {% if forloop.counter0 == 0 %}display: block;{% else %}display: none;{% endif %}  background-image:url('{% get_media_prefix %}');">
@@ -76,7 +76,7 @@
                 <div id="rightarrgo" onclick="plusDivs(1)"></div>
             </div>
         {% endfor %}
-    </div>
+    </div>-->
 </div>
 <div id="nav">
     <div class="middle">
@@ -194,7 +194,7 @@
         </div>
 
     </div>
-    <div style="width: 100%;padding-bottom: 10px;float: right;background-color: #5db4e2;right: 10px;color: white;text-align: end;padding-right: 10px;">
+    <div class="mojpodpis">
         Made by: <b style="color: #8bfcff">Bartosz Adamczyk</b></div>
 </body>
 </html>

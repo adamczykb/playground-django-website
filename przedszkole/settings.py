@@ -145,3 +145,5 @@ BOWER_INSTALLED_APPS = (
     'jquery-ui',
     'bootstrap'
 )
+FIRST_DAY_OF_WEEK = 1
+USE_FULLCALENDAR = True

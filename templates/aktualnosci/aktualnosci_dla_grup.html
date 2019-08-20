@@ -60,30 +60,42 @@
 
     .post .photo {
     width: auto;
-    height: 21vh;
+    height: auto;
     border-radius: 2px;
     background-repeat: no-repeat;
     background-image: url("/media/template jpg/template.jpg");
     background-position: center;
     background-size: cover;
     float:left;
+    max-width:35%
     }
 
     .post .title {
     color: whitesmoke;
-    font-size: 37px;
+    font-size: 2.5vw;
     padding: 10px;
     width: inherit;
     height:min-content;
+    font-weight: bold;
     }
     .post .time{
     height:min-content;
     clear:both;
     padding-left:10px;
     padding-bottom:10px;
+    font-size: 1vw;
+
     }
 
     @media only screen and (max-width: 1200px){
+    .post .time{
+    font-size: 1.5vw;
+
+    }
+    .post .title{
+    font-size:4vw;
+
+    }
     .akt_image{
     width:100%;
     }
@@ -93,6 +105,12 @@
     }
     }
     @media only screen and (orientation: portrait) {
+    .post .title {
+    font-size:4.5vw;
+    }
+    .post .time{
+    font-size:2.5vw;
+    }
     .inner_galleria{
     width:100%;
     padding: 10px 0px;
@@ -108,7 +126,7 @@
     padding-top: 12vh;
     }
     .headerakt{
-    font-size:2.5vw;
+    font-size:3.5vw;
     }
     }
 {% endblock %}

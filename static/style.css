@@ -127,7 +127,8 @@ svg {
     margin-top: 80px;
     font-family: 'Lato';
 }
-.dropdown-content-sub{
+
+.dropdown-content-sub {
     font-size: 13px;
     display: none;
     position: absolute;
@@ -136,9 +137,10 @@ svg {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 5;
     margin-left: 160px;
-     margin-top: -40px;
+    margin-top: -40px;
     font-family: 'Lato';
 }
+
 /* Links inside the dropdown */
 .dropdown-content a {
     color: #080808;
@@ -160,9 +162,11 @@ svg {
 .element:active .dropdown-content {
     display: block;
 }
-.grupki:hover .dropdown-content-sub{
+
+.grupki:hover .dropdown-content-sub {
     display: block;
 }
+
 .element:hover {
     background-color: #42698b;
     color: #f8f8ff !important;
@@ -183,6 +187,7 @@ svg {
     padding-bottom: 5px;
     font-family: Lato;
 }
+
 .dropdown-contentmo div {
     font-size: 4vw;
     color: #448daa;
@@ -463,14 +468,50 @@ body {
     width: 200px;
     background-color: black;
 }
-.slidergorny{
-        width: 90%;
+
+.slidergorny {
+    width: 90%;
     height: 35vh;
     margin-left: auto;
     margin-right: auto;
 
 }
 
+.mojpodpis {
+    width: 100%;
+    padding-bottom: 10px;
+    float: right;
+    background-color: #5db4e2;
+    right: 10px;
+    color: white;
+    text-align: end;
+    padding-right: 10px;
+}
+table{
+    margin-left: auto;
+    width: 1000px;
+    margin-right: auto;
+    margin-bottom: 7vh;
+}
+tr td{
+    height: 6vh;
+    width: 10%;
+}
+tr th{
+    text-align: center;
+    font-size: small;
+}
+tr td:first-child{
+    display: none;
+}
+tr th:first-child{
+    display: none;
+}
+td a{
+    color: #42698b;
+    pointer-events: none;
+   cursor: default;
+}
 @media only screen and (max-width: 1200px) and (orientation: landscape) {
     #info .middle {
         width: 100%;
@@ -507,9 +548,17 @@ body {
         display: block;
         color: #f8f8ff;
         font-size: 40px;
+        background-color: #5db4e2aa;
+        padding: 5px;
+        border-radius: 2px;
     }
-    .slidergorny{
+
+    .slidergorny {
         width: 100%;
+    }
+    table{
+        width: 97%;
+
     }
 }
 
@@ -534,12 +583,13 @@ body {
 /*"Open Sans",Arial,sans-serif*/
 
 @media only screen and  (orientation: portrait) and (max-width: 1200px) {
-    .slidergorny{
+    .slidergorny {
 
         display: none;
 
     }
-     #info .middle {
+
+    #info .middle {
         width: 100%;
     }
 
@@ -570,11 +620,16 @@ body {
     }
 
     .slider_con h1 {
-        margin-left: 30px;
         display: block;
         color: #f8f8ff;
         font-size: 40px;
+        background-color: #5db4e2aa;
+        padding: 5px;
+        border-radius: 2px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
     .mySlides #leftarr {
         background-size: 50%;
         width: 5%;
@@ -588,6 +643,7 @@ body {
     .slider_con {
         width: 90%;
     }
+
     .concact h1 {
         font-size: 6vw;
     }
@@ -601,11 +657,11 @@ body {
     }
 
     .infobox .title {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .infobox .time {
-        font-size: 3vw;
+        font-size: 2.3vw;
     }
 
     .infoboxbottom {
@@ -619,12 +675,15 @@ body {
     }
 
     .h1style {
+        margin-bottom: -15px;
         font-size: 10vw;
     }
-    .h1style p{
+
+    .h1style p {
         font-size: 4vw;
         display: none;
     }
+
     .info_near_slider {
         display: none;
     }
@@ -643,7 +702,7 @@ body {
     #nav {
         position: fixed;
         z-index: 3;
-        height: 12vh;
+        height: 8vh;
 
     }
 
@@ -651,7 +710,7 @@ body {
         display: none;
         position: fixed;
         width: 100%;
-        height: 90%;
+        height: 98%;
         background-color: #ffffffea;
         clear: both;
         overflow-y: scroll;
@@ -659,14 +718,14 @@ body {
 
     .slider {
         position: relative;
-        padding-top: 12vh;
+        padding-top: 8vh;
         z-index: 0;
         height: 60vh;
     }
 
     .zeby {
         position: fixed !important;
-        margin-top: 12vh !important;
+        margin-top: 8vh !important;
     }
 
     #nav .middle {
@@ -732,21 +791,39 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    #logodown{
+
+    #logodown {
         width: 30vw;
         height: 30vw;
     }
-    .footer{
+
+    .footer {
         flex-direction: column;
 
     }
+
     .infoboxbottom .elementi {
-    font-size: 4.5vw;
+        font-size: 4.5vw;
         padding-top: 1vh;
-padding-bottom: 1vh;
-padding-left: 3vw;
+        padding-bottom: 1vh;
+        padding-left: 3vw;
     }
-    .infoboxbottom .title{
+
+    .infoboxbottom .title {
         margin-top: 2vh;
+    }
+    .mojpodpis{
+        font-size: 1.5vw;
+    }
+    table{
+        width: 97%;
+        font-size: 5vw;
+    }
+    tr th{
+        font-size: 5vw;
+    }
+    svg{
+        padding: 0;
+        margin: 0;
     }
 }

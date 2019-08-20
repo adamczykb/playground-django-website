@@ -1,12 +1,21 @@
+import datetime
+
 from django.contrib.auth.decorators import login_required
 from django.db import connection
 from django.db.models.functions import Lower
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from schedule.models import Calendar
+from schedule.periods import Day, Month, Week, Year
+from schedule.settings import (
+    CHECK_EVENT_PERM_FUNC, CHECK_OCCURRENCE_PERM_FUNC, EVENT_NAME_PLACEHOLDER,
+    GET_EVENTS_FUNC, OCCURRENCE_CANCEL_REDIRECT, USE_FULLCALENDAR,
+)
+from django.utils import timezone
 
 # Create your views here.
 from gallery.models import Album, Image
+from schedule.views import CalendarByPeriodsView
 
 from website.models import Aktualnosci, GrupyPrzedszkolne
 
@@ -70,9 +79,17 @@ def index(request):
 
     posts=Aktualnosci.objects.order_by('-data').filter(do_kogo=None, visible=True)[:120]
     slider = Aktualnosci.objects.order_by('-data').filter(do_kogo=None, visible=True)[:8]
+    calendar=Calendar.objects.get(slug="kalendarz")
+    period_class = Month
+    event_list = GET_EVENTS_FUNC(request, calendar)
+    local_timezone = timezone.get_current_timezone()
+    date = timezone.now()
+    period = period_class(event_list, date, tzinfo=local_timezone)
+    mydate = datetime.datetime.now()
+    miesiac=mydate.strftime("%B")
     return render(request, 'glowna/index.html',
                   {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'slider': slider,
-                   'box': box, 'infobox': posts, 'footer': footer, 'calendar_slug': 'kalendarz', 'grupy': grupy})
+                   'box': box, 'infobox': posts, 'footer': footer, 'calendar': calendar, 'grupy': grupy,'period':period,'miesiac':miesiac})
 
 
 @login_required()

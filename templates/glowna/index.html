@@ -1,14 +1,14 @@
 {% extends "mybase.html" %}
-{% load scheduletags %}
+{% load scheduletags i18n %}
 {% load static %}
 {% block script %}
-<script type="text/javascript" src="{% static "jquery/dist/jquery.js" %}"></script>
-    <script type="text/javascript" src="{% static "jquery-ui/jquery-ui.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
-    <script type="text/javascript" src="{% static "schedule.js" %}"></script>
-    <link rel="stylesheet" href="{% static "schedule.css" %}" type="text/css" media="screen">
-    <link rel="stylesheet" href="{% static "jquery-ui/themes/base/all.css" %}" type="text/css" media="screen">
-    {% include "fullcalendar_script.html" %}
+    <link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}" type="text/css" media="screen">
+        <script type="text/javascript" src="{% static "jquery/dist/jquery.js" %}"></script>
+        <script type="text/javascript" src="{% static "jquery-ui/jquery-ui.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+        <script type="text/javascript" src="{% static "schedule.js" %}"></script>
+        <link rel="stylesheet" href="{% static "schedule.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "jquery-ui/themes/base/all.css" %}" type="text/css" media="screen">
 
 {% endblock %}
 {% block content %}
@@ -82,7 +82,7 @@
 	120.3,12.8 132.2,0.8 144,12.8 155.9,0.8 167.7,12.8 179.8,0.7 191.7,12.8 203.6,0.8 215.4,12.8 227.3,0.8 239.2,12.8 251.1,0.8
 	262.9,12.8 274.8,0.8 286.7,12.8 298.6,0.8 310.4,12.8 "></polyline>
                 </svg>
-                <p class="h1style" style="font-size: 20px; padding-top: 0px">Wiadomości z naszego przedszkola</p>
+                <p class="h1style" style="width: 100%;font-size: 20px; padding-top: 0px">Wiadomości z naszego przedszkola</p>
                 <div class="gridbox">
                     {% if infobox|length == 0 %}
                         <h1 style="margin-top: 40px; color: #42698b">Brak postów</h1>
@@ -104,9 +104,16 @@
                     {% endif %}
                 </div>
             </div>
-            <div id="body">
-                <div id='calendar' style="padding: 9vw; height: 70vw; width: 70vw; margin-left: auto;margin-right: auto; padding-bottom: 0"></div>
-
+        <h1 class="h1style">Kalendarz</h1>
+        <svg viewBox="0 0 311.1 14.4">
+                    <polyline points="0.7,13.7 13.4,0.8 25.3,12.8 37.2,0.8 49,12.8 60.9,0.8 72.8,12.8 84.7,0.8 96.6,12.8 108.4,0.8
+	120.3,12.8 132.2,0.8 144,12.8 155.9,0.8 167.7,12.8 179.8,0.7 191.7,12.8 203.6,0.8 215.4,12.8 227.3,0.8 239.2,12.8 251.1,0.8
+	262.9,12.8 274.8,0.8 286.7,12.8 298.6,0.8 310.4,12.8 "></polyline>
+                </svg>
+            <p class="h1style" style="text-align: center; width: 100%; font-size: 2vw; padding-top: 0px">{% prevnext "month_calendar" calendar period "F Y"%}</p>
+            <div style="margin-top: 20px;" id="body">
+                <!--<div id='calendar' style="padding: 9vw; height: 70vw; width: 70vw; margin-left: auto;margin-right: auto; padding-bottom: 0"></div>-->
+                {% month_table calendar period %}
             </div>
         </div>
     </div>
