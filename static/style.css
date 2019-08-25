@@ -175,7 +175,7 @@ svg {
     height: 100%;
     z-index: 2;
     position: relative;
-        transition: background-color 0.2s;
+    transition: background-color 0.2s;
 
 }
 
@@ -211,6 +211,7 @@ a {
     text-decoration: none;
     color: #f8f8ff;
 }
+
 .slider {
     width: 100%;
     height: 550px;
@@ -219,6 +220,7 @@ a {
     margin-left: auto;
     z-index: -1;
     border-radius: 3px;
+
 }
 
 body {
@@ -242,10 +244,32 @@ body {
     background-image: url("/static/templatejpg/template.jpg");
     background-size: cover;
     background-position: center;
-
+    animation: ani 1s linear;
 
 }
 
+@keyframes ani {
+    100% {
+        opacity: 1;
+    }
+    50% {
+         opacity: 0.8;
+    }
+     0% {
+        opacity: 1;
+    }
+}
+@keyframes anii {
+    100% {
+        opacity: 1;
+    }
+    50% {
+         opacity: 0.5;
+    }
+     0% {
+        opacity: 0;
+    }
+}
 .mySlides #rightarr {
     position: relative;
     height: 100%;
@@ -289,6 +313,7 @@ body {
     font-size: 40px;
     margin-right: 2.5%;
     margin-top: 2%;
+    animation: ani 1s linear;
     color: #f8f8ff;
 }
 
@@ -298,6 +323,7 @@ body {
     background-color: #42698b;
     width: max-content;
     border-radius: 3px;
+    animation: ani  1s linear;
 }
 
 
@@ -354,6 +380,7 @@ body {
     font-family: 'Lato', sans-serif;
     border-radius: 2px;
     margin-top: 30px;
+     animation: anii 0.2s linear;
 }
 
 .infobox .image {
@@ -490,41 +517,60 @@ body {
     text-align: end;
     padding-right: 10px;
 }
-table{
+
+table {
     margin-left: auto;
     width: 1000px;
     margin-right: auto;
     margin-bottom: 7vh;
 }
-tr td{
+
+tr td {
     height: 6vh;
     width: 10%;
     font-size: 20px;
     text-align: center;
 }
 
-tr th{
+tr th {
     text-align: center;
     font-size: 30px;
 }
-tr td:first-child{
+
+tr td:first-child {
     display: none;
 }
-tr th:first-child{
+
+tr th:first-child {
     display: none;
 }
-td a{
+
+td a {
     color: #42698b;
     pointer-events: none;
-   cursor: default;
+    cursor: default;
 }
-#month{
-    font-size: 33px;
+
+
+.row .row-centered a {
+    width: 3vw !important;
+    height: 3vw !important;
 }
-.row .row-centered a{
-    width: auto !important;
+
+.row-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-    .row{font-size: 3vw !important;}
+
+.row {
+    font-size: 3vw;
+}
+
+.row img {
+    width: 3vw;
+    height: 3vw;
+}
 
 @media only screen and (max-width: 1200px) and (orientation: landscape) {
     #info .middle {
@@ -570,10 +616,12 @@ td a{
     .slidergorny {
         width: 100%;
     }
-    table{
+
+    table {
         width: 97%;
 
     }
+
     .row-centered {
         text-align: center;
     }
@@ -600,9 +648,10 @@ td a{
 /*"Open Sans",Arial,sans-serif*/
 
 @media only screen and  (orientation: portrait) and (max-width: 1200px) {
-    #month{
+    #month {
         font-size: 4vw !important;
     }
+
     .slidergorny {
 
         display: none;
@@ -682,6 +731,10 @@ td a{
 
     .infobox .time {
         font-size: 2.3vw;
+    }
+
+    .infobox .image {
+        height: 25vh;
     }
 
     .infoboxbottom {
@@ -834,25 +887,51 @@ td a{
         width: 100%;
         margin-top: 2vh;
     }
-    .mojpodpis{
+
+    .mojpodpis {
         font-size: 1.5vw;
     }
-    table{
+
+    table {
         width: 97% !important;
         font-size: 5vw;
     }
-    tr th{
+
+    tr th {
         font-size: 4vw !important;
     }
-    tr td{
+
+    tr td {
         font-size: 3vw !important;
     }
-    svg{
+
+    svg {
         padding: 0;
         margin: 0;
     }
-    .row-centered{
-    text-align: center;
-    font-size: 5vw;
+
+    .row-centered {
+        text-align: center;
+        font-size: 5vh;
     }
+
+    .row img {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .row {
+        font-size: 5vh;
+    }
+
+    .row .row-centered a {
+        width: 5vh !important;
+        height: 5vh !important;
+        font-size: 5vh !important;
+    }
+
+    .row b {
+        font-size: 5vh !important;
+    }
+
 }

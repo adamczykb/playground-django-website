@@ -6,11 +6,16 @@ showDivs(slideIndex);
 expand();
 
 function plusDivs(n) {
+    if (n === undefined) {
+        n = 1;
+    }
     showDivs(slideIndex += n);
+
 }
 
 function showDivs(n) {
     var i;
+
     var x = document.getElementsByClassName("mySlides");
     var y = document.getElementsByClassName("info_near_slider");
     if (n > x.length) {
