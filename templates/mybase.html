@@ -4,7 +4,7 @@
 <html lang="pl">
 <head>
     <title>{% block title %}Strona Główna |
-        {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}{% endblock %}</title>
+        {{ nazwa_przedszkola|default:_('"Smerfy"') }}{% endblock %}</title>
     <link href="{% static "style.css" %}" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <meta charset="UTF-8"/>
@@ -13,7 +13,9 @@
     <meta name="theme-color" content="#f8f8ff"/>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 {% block script %}
-
+<style>table, th, td{
+        border-left: 1px solid #dddddd;
+    }</style>
 {% endblock %}
     <style>
         {% block style %}

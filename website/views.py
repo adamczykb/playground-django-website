@@ -65,9 +65,9 @@ def index(request):
     top = get_top(cursor)
     footer = get_footer(cursor)
     grupy = get_grupy(cursor)
-    cursor.execute(
-        "select e.zdjecie from public.website_podelementy as e where e.powiazanie_z_elementem_id = (select \"ID\" from public.website_elementy where nazwa_elementu like '%slider%') order by e.order")
-    slidergorny = cursor.fetchall()
+    #cursor.execute(
+    #    "select e.zdjecie from public.website_podelementy as e where e.powiazanie_z_elementem_id = (select \"ID\" from public.website_elementy where nazwa_elementu like '%slider%') order by e.order")
+    #slidergorny = cursor.fetchall()
     cursor.execute(
         "select e.\"ID\",e.nazwa_uzytkownika_elementu from public.website_elementy as e where e.nazwa_elementu like 'box:%' order by e.\"ID\" ")
     box = cursor.fetchall()

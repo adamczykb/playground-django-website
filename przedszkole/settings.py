@@ -131,7 +131,7 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
 ]
-GALLERY_FOOTER_INFO = "Smerfowe przedszkole"
+GALLERY_FOOTER_INFO = "\"Smerfy\""
 GALLERY_FOOTER_EMAIL = ""
 GALLERY_THEME_COLOR = "white"
 

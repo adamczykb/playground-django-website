@@ -1,7 +1,7 @@
 {% extends 'mybase.html' %}
 {% load static %}
 {% block title %}
-    Galeria {{ podstrona }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
+    Galeria {{ podstrona }} | {{ nazwa_przedszkola|default:_('"Smerfy"') }}
 {% endblock %}
 {% block style %}
     body{
@@ -10,8 +10,7 @@
     .inner_galleria{
 
     width:80%;
-    padding: 10px 10px;
-    padding-top:5px;
+    padding: 0 10px;
     max-width:1600px;
     background-color: #ffffffff;
     box-shadow: 6px 6px 14px -7px rgba(0,0,0,0.41);
@@ -25,11 +24,11 @@
     align-self: flex-end;
     text-align:left;
     padding: 0 20px; color:white; margin: 0; text-align: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
 
     }
     .button_gal{
-    height:10vh;background-size: contain;width: 40%;display: none;background-repeat: no-repeat;
+    height:10vh;background-size: contain;width: 40%;background-repeat: no-repeat;
     background-position: center;float:left;
     }
     .akt_image{
@@ -52,7 +51,7 @@
     background-color: rgba(5, 155, 54, 0.56);
     font-family: 'Lato', sans-serif;
     border-radius: 2px;
-    margin-top: 30px;
+    margin-bottom: 30px;
     display:flex;
     flex-durection:column;
     }
@@ -69,13 +68,22 @@
 
     .gali .title {
     color: whitesmoke;
-    font-size: 23px;
+    font-size: 20px;
     padding: 10px;
     position:absolute;
 align-self: flex-end;
-    width: 380px;
-    }
+    width: auto;
+    max-width:70%;
 
+    }
+    .gali .title h1{
+    background-color: #5db4e2aa;
+    padding: 5px;
+    width: max-content;
+    margin-bottom:0;
+    max-width: 370px;
+
+    }
     @media only screen and (max-width: 1200px){
     .akt_image{
     width:100%;
@@ -92,16 +100,31 @@ align-self: flex-end;
     }
     .button_gal{
     width:50%;
+    height:5vh;
     }
     .inner_galleria p{
     padding: 0 10px;
+        font-size:3.5vw;
+
     }
     .akt_image{
     width:100%;
-    padding-top: 12vh;
+    padding-top: 8vh;
     }
     .headerakt{
     font-size:3.5vw;
+    }
+    .gali{
+    width: 97%;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    .gali .title{
+    font-size:3.5vw;
+max-width:95%;
+    }
+    .gali .title h1{
+    max-width:92%;
     }
     }
 {% endblock %}
@@ -113,23 +136,23 @@ align-self: flex-end;
     </div>
 
     <div class="inner_galleria">
-        {% if gal|length >= 11 %}
-            <div style="width: 100%;height:10vh">
-                <div id="leftarrin" class="button_gal" onclick="nextgal(-19,{{ gal|length }})"
-                     style="background-position: left;background-image: url('/static/index/previous.svg');   "></div>
-                <div id="rightarrin" class="button_gal" onclick="nextgal(19,{{ gal|length }})"
-                     style="background-position: right;float:right;{% if infobox|length < 11 %}display:none;{% endif %}background-image: url('/static/index/next.svg');"></div>
+        {% if gal|length > 9 %}
+            <div style="width: 100%;height:5vh">
+                <div id="leftarrin" class="button_gal" onclick="nextgal(-9,{{ gal|length }})"
+                     style="display:none; background-position: left;background-image: url('/static/index/previous.svg');   "></div>
+                <div id="rightarrin" class="button_gal" onclick="nextgal(9,{{ gal|length }})"
+                     style="background-position: right;float:right;{% if gal|length <= 9 %}display:none;{% else %}display:block;{% endif %}background-image: url('/static/index/next.svg');"></div>
             </div>
         {% endif %}
         <div style="display:flex;clear: both; flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: space-around;">{% if gal|length == 0 %}
                 <h1 style="margin-left:auto;margin-right:auto;margin-top: 40px; color: #42698b;">Brak albumów</h1>
             {% else %}
                 {% for i in gal %}
-                    {% if forloop.counter0 < 499 %}
+                    {% if forloop.counter0 < 200 %}
                         <a class="gale" href="/gallery/album/{{ i.pk }}/{{ i.slug }}"
-                           style="{% if forloop.counter0 >= 19 %} display: none; {% endif %}">
+                           style="{% if forloop.counter0 > 9 %} display: none; {% endif %}">
                             <div class="gali">
-                            <div class="title">{{ i.title }}</div>
+                                <div class="title"><h1>{{ i.title }}</h1></div>
                                 <div class="image"> {% if i.display_highlight %}
                                     {% with i.display_highlight as image %}
                                         {% include "podstrony/thumbnail.html" %}

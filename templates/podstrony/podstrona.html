@@ -1,7 +1,7 @@
 {% extends 'mybase.html' %}
 {% load static %}
 {% block title %}
-    {{ result.0.2 }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
+    {{ result.0.2 }} | {{ nazwa_przedszkola|default:_('"Smerfy"') }}
 {% endblock %}
 {% block style %}
     body{
@@ -24,7 +24,9 @@
     align-self: flex-end;
     text-align:left;
     padding: 0 20px;color:white; margin: 0; text-align: center;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
+
+
     }
     .data{
     font-size:14px;
@@ -74,6 +76,7 @@
     }
      .headerakt{
         font-size:3.5vw;
+
     }
     .inner_aktualnosci{
     width:100%;
@@ -94,10 +97,18 @@
     }
     .inner_aktualnosci p{
     padding: 0 10px;
+        font-size:3.5vw;
+
     }
     .akt_image{
     width:100%;
-    padding-top: 12vh;
+    padding-top: 8vh;
+    }
+     .overgal{
+    height:15vh;
+    }
+.elementgal{
+    height:20vh;
     }
     }
 {% endblock %}

@@ -109,6 +109,7 @@ svg {
     text-align: center;
     font-size: 24px;
     color: #42698b;
+    transition: background-color 0.2s;
 
 }
 
@@ -157,6 +158,7 @@ svg {
 /* Show the dropdown menu on hover */
 .element:hover .dropdown-content {
     display: block;
+
 }
 
 .element:active .dropdown-content {
@@ -173,6 +175,8 @@ svg {
     height: 100%;
     z-index: 2;
     position: relative;
+        transition: background-color 0.2s;
+
 }
 
 .element span {
@@ -496,7 +500,7 @@ tr td{
     height: 6vh;
     width: 10%;
     font-size: 20px;
-
+    text-align: center;
 }
 
 tr th{
@@ -514,6 +518,14 @@ td a{
     pointer-events: none;
    cursor: default;
 }
+#month{
+    font-size: 33px;
+}
+.row .row-centered a{
+    width: auto !important;
+}
+    .row{font-size: 3vw !important;}
+
 @media only screen and (max-width: 1200px) and (orientation: landscape) {
     #info .middle {
         width: 100%;
@@ -562,6 +574,9 @@ td a{
         width: 97%;
 
     }
+    .row-centered {
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (orientation: landscape) {
@@ -585,6 +600,9 @@ td a{
 /*"Open Sans",Arial,sans-serif*/
 
 @media only screen and  (orientation: portrait) and (max-width: 1200px) {
+    #month{
+        font-size: 4vw !important;
+    }
     .slidergorny {
 
         display: none;
@@ -634,16 +652,16 @@ td a{
 
     .mySlides #leftarr {
         background-size: 50%;
-        width: 5%;
+        width: 10%;
     }
 
     .mySlides #rightarr {
         background-size: 50%;
-        width: 5%;
+        width: 10%;
     }
 
     .slider_con {
-        width: 90%;
+        width: 80%;
     }
 
     .concact h1 {
@@ -651,7 +669,7 @@ td a{
     }
 
     .concact div {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .infobox {
@@ -777,6 +795,7 @@ td a{
 
     .concact {
         text-align: center;
+
     }
 
     .elementmo {
@@ -812,23 +831,28 @@ td a{
     }
 
     .infoboxbottom .title {
+        width: 100%;
         margin-top: 2vh;
     }
     .mojpodpis{
         font-size: 1.5vw;
     }
     table{
-        width: 97%;
+        width: 97% !important;
         font-size: 5vw;
     }
     tr th{
-        font-size: 4vw;
+        font-size: 4vw !important;
     }
     tr td{
-        font-size: 3vw;
+        font-size: 3vw !important;
     }
     svg{
         padding: 0;
         margin: 0;
+    }
+    .row-centered{
+    text-align: center;
+    font-size: 5vw;
     }
 }

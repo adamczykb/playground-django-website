@@ -92,7 +92,7 @@ class Aktualnosci(models.Model):
                                   format='JPEG',
                                   options={'quality': 100}, null=True, blank=True)
     visible = models.BooleanField(default=True, verbose_name="Widoczne")
-    event = models.OneToOneField(null=True, blank=True, on_delete=models.DO_NOTHING, to='schedule.Event')
+    event = models.OneToOneField(null=True, blank=True, on_delete=models.SET_NULL, to='schedule.Event',unique=True, verbose_name="Wydarzenie w kalendarzu")
     do_kogo = models.ManyToManyField(to=GrupyPrzedszkolne, blank=True,
                                      verbose_name="Gdzie ma być wyswietlana aktualność (domyslnie na głównej)")
 

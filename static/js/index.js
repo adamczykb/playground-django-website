@@ -98,16 +98,16 @@ function nextgal(n, m) {
     var l = document.getElementById("leftarrin");
     var r = document.getElementById("rightarrin");
     var b = document.getElementsByClassName("gale");
-    for (s = gale - 19; s < gale; s++) {
+    for (s = gale - 9; s < gale; s++) {
         if (s < m)
             b[s].style.display = "none";
     }
     gale += n;
-    for (s = gale - 19; s < gale; s++) {
+    for (s = gale - 9; s < gale; s++) {
         if (s < m)
             b[s].style.display = "block";
     }
-    if (gale <= 19) {
+    if (gale <= 9) {
         l.style.display = "none";
     } else {
         l.style.display = "";
@@ -118,25 +118,25 @@ function nextgal(n, m) {
         r.style.display = "";
     }
 }
-function nextgal(n, m) {
+function nextgroaktu(n, m) {
     var l = document.getElementById("leftarrin");
     var r = document.getElementById("rightarrin");
     var b = document.getElementsByClassName("gale");
-    for (s = gale - 19; s < gale; s++) {
+    for (s = actu - 9; s < actu; s++) {
         if (s < m)
             b[s].style.display = "none";
     }
-    gale += n;
-    for (s = gale - 19; s < gale; s++) {
+    actu += n;
+    for (s = actu - 9; s < actu; s++) {
         if (s < m)
             b[s].style.display = "block";
     }
-    if (gale <= 19) {
+    if (actu <= 9) {
         l.style.display = "none";
     } else {
         l.style.display = "";
     }
-    if (gale > m) {
+    if (actu > m) {
         r.style.display = "none";
     } else {
         r.style.display = "";

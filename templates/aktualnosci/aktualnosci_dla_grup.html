@@ -1,7 +1,7 @@
 {% extends 'mybase.html' %}
 {% load static %}
 {% block title %}
-    Aktualności {{ podstrona }} | {{ nazwa_przedszkola|default:_('Smerfowe przedszkole') }}
+    Aktualności {{ podstrona }} | {{ nazwa_przedszkola|default:_('"Smerfy"') }}
 {% endblock %}
 {% block style %}
 
@@ -11,8 +11,8 @@
     .inner_galleria{
 
     width:80%;
-    padding: 10px 10px;
-    padding-top:5px;
+    padding: 0px 10px;
+
     max-width:1600px;
     background-color: #ffffffff;
     box-shadow: 6px 6px 14px -7px rgba(0,0,0,0.41);
@@ -30,8 +30,9 @@
 
     }
     .button_gal{
-    height:10vh;background-size: contain;width: 40%;display: none;background-repeat: no-repeat;
+    height:10vh;background-size: contain;width: 40%;background-repeat: no-repeat;
     background-position: center;float:left;
+    margin-top:10px;margin-bottom:10px;
     }
     .akt_image{
     margin: 0 auto;
@@ -53,13 +54,12 @@
     background-color: rgba(5, 155, 54, 0.56);
     font-family: 'Lato', sans-serif;
     border-radius: 2px;
-    margin-top: 30px;
+    margin-bottom: 30px;
     display:flex;
     flex-durection:column;
     }
 
     .post .photo {
-    width: auto;
     height: auto;
     border-radius: 2px;
     background-repeat: no-repeat;
@@ -67,13 +67,14 @@
     background-position: center;
     background-size: cover;
     float:left;
-    max-width:35%
+    width:35%
     }
 
     .post .title {
     color: whitesmoke;
-    font-size: 2.5vw;
+    font-size: 23px;
     padding: 10px;
+    padding-bottom:5px;
     width: inherit;
     height:min-content;
     font-weight: bold;
@@ -83,7 +84,7 @@
     clear:both;
     padding-left:10px;
     padding-bottom:10px;
-    font-size: 1vw;
+    font-size: 11px;
 
     }
 
@@ -117,13 +118,16 @@
     }
     .button_gal{
     width:50%;
+    height:5vh;
     }
     .inner_galleria p{
     padding: 0 10px;
+        font-size:3.5vw;
+
     }
     .akt_image{
     width:100%;
-    padding-top: 12vh;
+    padding-top: 8vh;
     }
     .headerakt{
     font-size:3.5vw;
@@ -138,12 +142,12 @@
     </div>
 
     <div class="inner_galleria">
-        {% if post|length >= 11 %}
-            <div style="width: 100%;height:10vh">
-                <div id="leftarrin" class="button_gal" onclick="nextgroaktu(-19,{{ post|length }})"
-                     style="background-position: left;background-image: url('/static/index/previous.svg');   "></div>
-                <div id="rightarrin" class="button_gal" onclick="nextgroaktu(19,{{ post|length }})"
-                     style="background-position: right;float:right;{% if infobox|length < 11 %}display:none;{% endif %}background-image: url('/static/index/next.svg');"></div>
+        {% if post|length > 9 %}
+            <div style="width: 100%;height:5vh">
+                <div id="leftarrin" class="button_gal" onclick="nextgroaktu(-9,{{ post|length }})"
+                     style="display: none; background-position: left;background-image: url('/static/index/previous.svg');   "></div>
+                <div id="rightarrin" class="button_gal" onclick="nextgroaktu(9,{{ post|length }})"
+                     style="background-position: right;float:right;{% if post|length <= 9 %}display:none;{% else %}display:block;{% endif %}background-image: url('/static/index/next.svg');"></div>
             </div>
         {% endif %}
         <div style="display:flex;clear: both; flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: space-around;">
@@ -152,8 +156,7 @@
             {% else %}
                 {% for i in post %}
                     {% if forloop.counter0 < 499 %}
-                        <a class="gale" style="width: 100%" href="/aktualnosci/{{ i.ID }}"
-                           style="{% if forloop.counter0 >= 19 %} display: none; {% endif %}">
+                        <a class="gale" style="width: 100%;{% if forloop.counter0 > 10 %} display: none; {% endif %};" href='/aktualnosci/{{ i.ID }}'>
                             <div class="post" {% if i.important == True %}style="background-color:#FF7900;"{% endif %}>
                                 {% if i.zdjecie == '' %}{% else %}<img class="photo" src="{% get_media_prefix %}{{ i.zdjecie }}">{% endif %}
                                 <div style="display: flex;height: inherit;width: inherit;flex-direction: column;align-self: center;">
