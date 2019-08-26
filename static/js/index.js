@@ -28,9 +28,11 @@ function showDivs(n) {
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
         y[i].style.display = "none";
+
     }
     x[slideIndex - 1].style.display = "block";
     y[slideIndex - 1].style.display = "";
+
 }
 
 function expand() {
@@ -41,14 +43,14 @@ function expand() {
     const z = document.getElementsByClassName("zeby");
     var body = document.body;
     var list = document.getElementById("rest");
-    if (list.style.display === "block") {
+    if (list.style.height === "98%") {
         z[0].style.display = "block";
-        list.style.display = "none";
+        list.style.height = "0px";
         body.style.overflowY = "scroll";
 
     } else {
         z[0].style.display = "none";
-        list.style.display = "block";
+        list.style.height = "98%";
         body.style.overflowY = "hidden";
     }
 }

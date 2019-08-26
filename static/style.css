@@ -124,9 +124,10 @@ svg {
     background-color: #f8f8ff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 5;
+    z-index: 150;
     margin-top: 80px;
     font-family: 'Lato';
+
 }
 
 .dropdown-content-sub {
@@ -136,10 +137,10 @@ svg {
     background-color: #f8f8ff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 5;
     margin-left: 160px;
     margin-top: -40px;
     font-family: 'Lato';
+    z-index: 150;
 }
 
 /* Links inside the dropdown */
@@ -148,6 +149,7 @@ svg {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    z-index: 150;
 }
 
 /* Change color of dropdown links on hover */
@@ -173,7 +175,7 @@ svg {
     background-color: #42698b;
     color: #f8f8ff !important;
     height: 100%;
-    z-index: 2;
+    z-index: 150;
     position: relative;
     transition: background-color 0.2s;
 
@@ -190,6 +192,7 @@ svg {
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: Lato;
+    z-index: 150;
 }
 
 .dropdown-contentmo div {
@@ -199,6 +202,7 @@ svg {
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: Lato;
+    z-index: 150;
 }
 
 @-moz-document url-prefix() {
@@ -218,9 +222,10 @@ a {
     background-color: #5db4e2;
     margin-right: auto;
     margin-left: auto;
-    z-index: -1;
     border-radius: 3px;
+    overflow: hidden;
 
+    position: relative;
 }
 
 body {
@@ -236,40 +241,41 @@ body {
 }
 
 .mySlides {
+    position: absolute;
     background-repeat: no-repeat;
-    display: none;
-    height: 100%;
+    display: block;
+    height: 550px;
     float: left;
     width: 65%;
     background-image: url("/static/templatejpg/template.jpg");
     background-size: cover;
     background-position: center;
-    animation: ani 1s linear;
+    left: 100%;
+    -webkit-animation: slide 0.7s forwards;
+    animation: slide 0.7s forwards;
+    overflow: no-content;
 
 }
 
-@keyframes ani {
+@-webkit-keyframes slide {
     100% {
-        opacity: 1;
+        left: 0;
     }
-    50% {
-         opacity: 0.8;
-    }
-     0% {
-        opacity: 1;
+    10% {
+        left: 70%;
     }
 }
-@keyframes anii {
+
+@keyframes slide {
     100% {
-        opacity: 1;
+        left: 0;
     }
-    50% {
-         opacity: 0.5;
+    10% {
+        left: 70%;
     }
-     0% {
-        opacity: 0;
-    }
+
 }
+
 .mySlides #rightarr {
     position: relative;
     height: 100%;
@@ -302,6 +308,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 100%;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
 }
 
 .slid_con_text {
@@ -313,7 +323,6 @@ body {
     font-size: 40px;
     margin-right: 2.5%;
     margin-top: 2%;
-    animation: ani 1s linear;
     color: #f8f8ff;
 }
 
@@ -323,7 +332,6 @@ body {
     background-color: #42698b;
     width: max-content;
     border-radius: 3px;
-    animation: ani  1s linear;
 }
 
 
@@ -360,6 +368,23 @@ body {
     background-position: center;
 }
 
+
+.infobox {
+    margin-left: 100%;
+    -webkit-animation: slide2 0.7s forwards;
+    animation: slide2 0.7s forwards;
+    overflow: no-content;
+
+}
+@keyframes slide2 {
+    100% {
+        margin-left: 0;
+    }
+    10% {
+        margin-left: 10%;
+    }
+
+}
 .gridbox {
     clear: both;
     width: 100%;
@@ -371,6 +396,7 @@ body {
     justify-content: space-around;
     margin-bottom: 30px;
 
+
 }
 
 .infobox {
@@ -380,7 +406,6 @@ body {
     font-family: 'Lato', sans-serif;
     border-radius: 2px;
     margin-top: 30px;
-     animation: anii 0.2s linear;
 }
 
 .infobox .image {
@@ -482,10 +507,11 @@ body {
 
 .dropdown-contentmo {
     display: none;
+    z-index: 100;
 }
 
 #nav #rest {
-    display: none;
+    height: 0;
 }
 
 .elementmo {
@@ -780,19 +806,24 @@ td a {
     }
 
     #nav #rest {
-        display: none;
         position: fixed;
         width: 100%;
-        height: 98%;
+        height: 0%;
         background-color: #ffffffea;
         clear: both;
         overflow-y: scroll;
+        transition: height .5s;
     }
 
     .slider {
         position: relative;
         padding-top: 8vh;
         z-index: 0;
+        overflow: hidden;
+        height: 60vh;
+    }
+
+    .mySlides {
         height: 60vh;
     }
 
