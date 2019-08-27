@@ -4,6 +4,15 @@
     {{ result.0.1 }} | {{ nazwa_przedszkola|default:_('"Smerfy"') }}
 {% endblock %}
 {% block style %}
+    td:first-child{
+    display:block !important;
+    }
+    td{
+    border: 1px solid black !important;
+    }
+    tr td{
+        width:auto;
+    }
     body{
     background-color:#f4f4f4;
     }

@@ -32,6 +32,8 @@ class StronyNaGl(SummernoteModelAdmin, admin.ModelAdmin):
     list_display = ("tytul", "data", "nazwa_podreczna")
     list_filter = ("data",)
 
+    
+
 
 @admin.register(GrupyPrzedszkolne)
 class Grupy(admin.ModelAdmin):
