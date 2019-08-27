@@ -14,7 +14,7 @@ class Strona(models.Model):
     def __str__(self):
         return 'strona: ' + self.tytul
 
-    ID = models.AutoField(primary_key=True, editable=False, default=1)
+    ID = models.AutoField(primary_key=True, editable=False)
     nazwa_podreczna = models.CharField(max_length=255, verbose_name="Nazwa dla listy stron")
     tytul = models.CharField(max_length=255, verbose_name="Tytul strony")
     data = models.DateTimeField(auto_now_add=True, verbose_name="Data wydania", null=True)
