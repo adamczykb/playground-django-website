@@ -2,10 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7c89144-bb07-4777-85e6-a031819a05d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/schedule/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/feeds/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/feeds/ical.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/de/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/en/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/es/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/fi/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/fr/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/it/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/pt_BR/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/locale/zh/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0002_event_color_event.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0003_auto_20160715_0028.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0004_text_fields_not_null.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0005_verbose_name_plural_for_calendar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0006_update_text_fields_empty_string.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0007_merge_text_fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0008_calendar_slug_unique.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0008_gfk_index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0009_merge_20180108_2303.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0010_events_set_missing_calendar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0011_event_calendar_not_null.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0012_auto_20190820_1559.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/0013_auto_20190825_1640.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/models/calendars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/models/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/models/rules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/periods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/static/schedule.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/static/schedule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/fullcalendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/fullcalendar_modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/fullcalendar_script.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/profiles/schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_create_event_options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_daily_table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_day_cell.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_day_cell_big.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_dialogs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_event_options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_event_title.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_month_table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/_prevnext.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_compact_month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_day.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_tri_month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_week.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar_year.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/cancel_occurrence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/create_event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/delete_event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/edit_occurrence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templates/schedule/occurrence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/templatetags/scheduletags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule/widgets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/przedszkole/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/przedszkole/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/przedszkole/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/przedszkole/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,104 +206,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44520">
-              <caret line="2968" selection-start-line="2968" selection-end-line="2968" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/templates/schedule/calendar_month.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="105" selection-start-line="5" selection-start-column="105" selection-end-line="5" selection-end-column="105" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5745">
-              <caret line="383" column="22" selection-start-line="383" selection-start-column="22" selection-end-line="383" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/aktualnosci/aktualnosci_dla_grup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/przedszkole/settings.py">
+        <entry file="file://$PROJECT_DIR$/schedule/models/events.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/przedszkole/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-              <folding>
-                <element signature="e#227#236#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/podstrony/galeria.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="240">
+              <caret line="410" column="41" selection-start-line="410" selection-start-column="41" selection-end-line="410" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -298,7 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/404_error.html" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/models.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/admin.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -315,10 +292,8 @@
         <option value="$PROJECT_DIR$/templates/occurrence.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/templates/fullcalendar_script.html" />
-        <option value="$PROJECT_DIR$/website/admin.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/views.py" />
         <option value="$PROJECT_DIR$/templates/podstrony/thumbnail.html" />
-        <option value="$PROJECT_DIR$/przedszkole/urls.py" />
         <option value="$PROJECT_DIR$/locale/pl/django.po" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/periods.py" />
         <option value="$PROJECT_DIR$/static/schedule.js" />
@@ -331,7 +306,6 @@
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/templates/schedule/_day_cell_big.html" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/views.py" />
         <option value="$PROJECT_DIR$/website/views.py" />
-        <option value="$PROJECT_DIR$/templates/podstrony/podstrona.html" />
         <option value="$PROJECT_DIR$/templates/admin/base_site.html" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/models/calendars.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/models/events.py" />
@@ -345,10 +319,14 @@
         <option value="$PROJECT_DIR$/templates/aktualnosci/aktualnosci_dla_grup.html" />
         <option value="$PROJECT_DIR$/templates/podstrony/galeria.html" />
         <option value="$PROJECT_DIR$/static/style.css" />
-        <option value="$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html" />
         <option value="$PROJECT_DIR$/przedszkole/wsgi.py" />
-        <option value="$PROJECT_DIR$/website/models.py" />
         <option value="$PROJECT_DIR$/przedszkole/settings.py" />
+        <option value="$PROJECT_DIR$/website/admin.py" />
+        <option value="$PROJECT_DIR$/templates/podstrony/podstrona.html" />
+        <option value="$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html" />
+        <option value="$PROJECT_DIR$/przedszkole/urls.py" />
+        <option value="$PROJECT_DIR$/website/models.py" />
+        <option value="$PROJECT_DIR$/schedule/models/events.py" />
       </list>
     </option>
   </component>
@@ -393,72 +371,13 @@
             <path>
               <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
               <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
               <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="templatejpg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="aktualnosci" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="glowna" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="podstrony" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="przedszkole" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
@@ -475,88 +394,6 @@
               <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="przedszkole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (przedszkole) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -571,7 +408,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="editorconfig.notification" value="ignore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/base" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -579,18 +416,18 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/base" />
-      <recent name="$PROJECT_DIR$/templates/aktualnosci" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/website/css" />
       <recent name="$PROJECT_DIR$/static/admin/css/vendor" />
       <recent name="$PROJECT_DIR$/static/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static/base" />
+      <recent name="$PROJECT_DIR$/templates/aktualnosci" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -727,7 +564,8 @@
       <workItem from="1566728907837" duration="19018000" />
       <workItem from="1566834158803" duration="6315000" />
       <workItem from="1566854405857" duration="2532000" />
-      <workItem from="1566901077434" duration="554000" />
+      <workItem from="1566901077434" duration="3208000" />
+      <workItem from="1567005997089" duration="247000" />
     </task>
     <task id="LOCAL-00001" summary="main page">
       <created>1564871704735</created>
@@ -904,11 +742,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566744048059</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="abstrakcja">
+      <created>1566901742572</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1566901742572</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356553000" />
+    <option name="totallyTimeSpent" value="359454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -923,12 +768,12 @@
     <frame x="-4" y="0" width="1608" height="866" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979424" visible="true" weight="0.26061776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979424" visible="true" weight="0.26383525" />
       <window_info id="Structure" order="1" sideWeight="0.5020576" side_tool="true" weight="0.21106821" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32880434" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.65572715" visible="true" weight="0.3201635" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65444016" visible="true" weight="0.3201635" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993565" weight="0.39918256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -936,8 +781,8 @@
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.498713" weight="0.32833788" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49935317" weight="0.3278237" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34427285" side_tool="true" visible="true" weight="0.3201635" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47361648" weight="0.30245233" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34555984" side_tool="true" visible="true" weight="0.3201635" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47168598" weight="0.30163044" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4993565" weight="0.32833788" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.496139" weight="0.33787465" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -974,67 +819,6 @@
     <SUITE FILE_PATH="coverage/przedszkole$tests.coverage" NAME="tests Coverage Results" MODIFIED="1564846009334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/przedszkole/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-end-line="29" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/periods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#732#6220#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/locale/pl/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
-          <caret line="190" selection-start-line="190" selection-end-line="190" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/locale/en/LC_MESSAGES/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/widgets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="214" column="40" selection-start-line="214" selection-start-column="31" selection-end-line="214" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/templates/schedule/_daily_table.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1066,9 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="32" column="29" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,9 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1103,16 +881,6 @@
         <state relative-caret-position="-990" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/podstrony/podstrona.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-          <folding>
-            <element signature="e#2438#2462#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/base_site.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1122,11 +890,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/models/calendars.py">
@@ -1138,11 +902,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/models/rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1438">
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1438" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/schedule/models/events.py">
@@ -1156,9 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2876">
           <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1212,9 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="199" selection-start-line="4" selection-start-column="199" selection-end-line="4" selection-end-column="199" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,9 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
           <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1270,9 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="105" selection-start-line="5" selection-start-column="105" selection-end-line="5" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,16 +1048,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html">
+    <entry file="file://$PROJECT_DIR$/templates/podstrony/podstrona.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="225">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/website/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/migrations/0009_auto_20190827_1235.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/przedszkole/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="225">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="e#227#236#0" expanded="true" />
@@ -1324,20 +1085,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/schedule/feeds/ical.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/przedszkole/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/przedszkole/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="345">
+          <caret line="72" column="4" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="73" selection-end-column="51" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/przedszkole/settings.py">
+    <entry file="file://$PROJECT_DIR$/schedule/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schedule/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/aktualnosci/aktualnosci.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schedule/models/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="410" column="41" selection-start-line="410" selection-start-column="41" selection-end-line="410" selection-end-column="41" />
         </state>
       </provider>
     </entry>

@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'schedule',
 'djangobower',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -52,10 +51,30 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 TEMPLATE_CONTEXT_PROCESSORS = ["django.template.context_processors.request",]
 
 ROOT_URLCONF = 'przedszkole.urls'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '~debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 TEMPLATES = [
     {
@@ -147,3 +166,5 @@ BOWER_INSTALLED_APPS = (
 )
 FIRST_DAY_OF_WEEK = 1
 USE_FULLCALENDAR = True
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -1,0 +1,14 @@
+{% extends "mybase.html" %}
+{% load scheduletags i18n %}
+
+{% block content %}
+{% include "schedule/_dialogs.html" %}
+<div class="row row-centered" style="text-align:center;padding-top: 10vh !important;margin-bottom: 15px; ">
+  {% prevnext "month_calendar" calendar period "F Y"%}
+
+  </div>
+  <div class="center span7">
+    {% month_table calendar period "regular" %}
+  </div>
+</div>
+{% endblock %}

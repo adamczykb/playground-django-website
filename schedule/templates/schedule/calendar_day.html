@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load scheduletags i18n %}
+
+{% block body %}
+
+{% include "schedule/_dialogs.html" %}
+
+<div class="row row-centered">
+    {% prevnext "day_calendar" calendar period "l, F d, Y" %}
+</div>
+  <div class="row row-centered">
+    <div>
+      {% daily_table period %}
+    </div>
+</div>
+
+{% endblock %}
