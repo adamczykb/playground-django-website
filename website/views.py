@@ -21,8 +21,13 @@ from website.models import Aktualnosci, GrupyPrzedszkolne
 
 
 def error_404_view(request, exception):
-    data = {"name": "ThePythonDjango.com"}
-    return render(request, '404_error.html', data)
+    data = {"name": exception}
+    cursor = connection.cursor()
+    nav = get_nav(cursor)
+    top = get_top(cursor)
+    footer = get_footer(cursor)
+    grupy = get_grupy(cursor)
+    return render(request, '404_error.html', {'toptel': top[0][0], 'topmail': top[1][0], 'topul': top[2][0], 'nav': nav, 'footer': footer,'grupy': grupy,})
 
 
 def get_top(cursor):

@@ -11,23 +11,27 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from environ import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+env = Path(BASE_DIR + '/secure_data.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ig#amx*c+vx@#e2_xxr$j(edlntxvzkxtn_=en(6*h$_+iq0k&'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
-
+DEBUG = False
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_REDIRECT_EXEMPT = []
+ALLOWED_HOSTS = ["127.0.0.1",'localhost']
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,7 +45,7 @@ INSTALLED_APPS = [
     'imagekit',
     'adminsortable2',
     'schedule',
-'djangobower',
+    'djangobower',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-TEMPLATE_CONTEXT_PROCESSORS = ["django.template.context_processors.request",]
+TEMPLATE_CONTEXT_PROCESSORS = ["django.template.context_processors.request", ]
 
 ROOT_URLCONF = 'przedszkole.urls'
 
@@ -75,7 +79,12 @@ LOGGING = {
         },
     },
 }
-
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': 'unix:/tmp/memcached.sock',
+    }
+}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -101,10 +110,10 @@ WSGI_APPLICATION = 'przedszkole.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'przedszkole',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '',
     }
 }
@@ -147,9 +156,9 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/'),
-]
+# STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static/'),
+# ]
 GALLERY_FOOTER_INFO = "\"Smerfy\""
 GALLERY_FOOTER_EMAIL = ""
 GALLERY_THEME_COLOR = "white"
@@ -166,5 +175,5 @@ BOWER_INSTALLED_APPS = (
 )
 FIRST_DAY_OF_WEEK = 1
 USE_FULLCALENDAR = True
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
