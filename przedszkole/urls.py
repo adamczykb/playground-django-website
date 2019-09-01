@@ -27,7 +27,7 @@ urlpatterns = [
                   path('gallery/', include('gallery.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('kalendarz/', include('schedule.urls')),
-              ] + staticfiles_urlpatterns()
+              ] + staticfiles_urlpatterns() + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'website.views.error_404_view'
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

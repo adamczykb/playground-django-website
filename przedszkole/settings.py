@@ -29,8 +29,9 @@ SECURE_BROWSER_XSS_FILTER = True
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
+USE_X_FORWARDED_HOST = True
 SECURE_REDIRECT_EXEMPT = []
-ALLOWED_HOSTS = ["127.0.0.1",'localhost']
+ALLOWED_HOSTS = ["localhost","127.0.0.1"]
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -154,7 +155,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = '/code/media'
 MEDIA_URL = '/media/'
 # STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, 'static/'),
@@ -175,5 +176,5 @@ BOWER_INSTALLED_APPS = (
 )
 FIRST_DAY_OF_WEEK = 1
 USE_FULLCALENDAR = True
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = '/code/static/'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
