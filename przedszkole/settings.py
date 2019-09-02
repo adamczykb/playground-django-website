@@ -155,7 +155,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/code/media'
+MEDIA_ROOT = '/media/'
 MEDIA_URL = '/media/'
 # STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, 'static/'),
@@ -176,5 +176,5 @@ BOWER_INSTALLED_APPS = (
 )
 FIRST_DAY_OF_WEEK = 1
 USE_FULLCALENDAR = True
-STATIC_ROOT = '/code/static/'
+STATIC_ROOT = '/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

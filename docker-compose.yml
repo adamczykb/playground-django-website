@@ -37,8 +37,8 @@ services:
     depends_on:
       - web
     volumes:
-      - ./static:/code/static
-      - ./media:/code/media
+      - ./static:/static
+      - ./media:/media
 
 
 
