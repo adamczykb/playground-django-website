@@ -24,8 +24,6 @@ services:
     volumes:
       - ./static:/static
       - ./media:/media
-    ports:
-      - "8001:8001"
     entrypoint: ./docker-entrypoint.sh
     command: gunicorn przedszkole.wsgi:application -b 0.0.0.0:8001
     networks:
@@ -39,12 +37,15 @@ services:
     volumes:
       - ./static:/static
       - ./media:/media
+    networks:
+      - przedszkole
 
 
 
 networks:
   przedszkole:
     external: true
+    driver: bridge
 
 volumes:
   pgdata:

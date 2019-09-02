@@ -31,7 +31,7 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 USE_X_FORWARDED_HOST = True
 SECURE_REDIRECT_EXEMPT = []
-ALLOWED_HOSTS = ["localhost","127.0.0.1"]
+ALLOWED_HOSTS = ["localhost","127.0.0.1",'www.smerfywrzesnia.pl']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
