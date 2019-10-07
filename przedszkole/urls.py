@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from przedszkole import settings
-
+from django.views.generic.base import TemplateView
 urlpatterns = [
                   path('', include('website.urls')),
                   path('admin/', admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
                   path('gallery/', include('gallery.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('kalendarz/', include('schedule.urls')),
+		  path('googleb91c225602a363f5.html',TemplateView.as_view(template_name='googleb91c225602a363f5.html')),
               ] + staticfiles_urlpatterns() + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'website.views.error_404_view'
 if settings.DEBUG:

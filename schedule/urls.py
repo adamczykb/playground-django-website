@@ -48,7 +48,7 @@ urlpatterns = [
         CalendarView.as_view(),
         name='calendar_home',
         ),
-    url(r'^fullcalendar/(?P<calendar_slug>[-\w]+)/$',
+   url(r'^fullcalendar/(?P<calendar_slug>[-\w]+)/$',
         FullCalendarView.as_view(),
         name='fullcalendar'),
 
