@@ -35,7 +35,10 @@ svg {
     vertical-align: middle;
 
 }
+.row b{
+    font-size:50px;
 
+}
 .inmiddle {
     display: flex;
     float: left;
@@ -97,7 +100,7 @@ svg {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-position-y: 3px;
+    background-position-y: 0px;
 }
 
 #nav .element {
@@ -447,7 +450,7 @@ body {
     margin-top: 0px;
     border-radius: 2px;
     height: 13%;
-    font-size: 35px;
+    font-size: 33px;
     display: flex;
     align-items: center;
     text-align: left;
@@ -522,7 +525,10 @@ body {
     height: 200px;
     margin: 20px;
     width: 200px;
-    background-color: black;
+    background-image: url("http://smerfyprzedszkole.pl/media/django-summernote/2019-10-21/f2386957-f225-41c0-b078-dd64ca7065b2.png");
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .slidergorny {
@@ -554,7 +560,7 @@ table {
 tr td {
     height: 6vh;
     width: 10%;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 }
 
@@ -590,12 +596,12 @@ td a {
 }
 
 .row {
-    font-size: 3vw;
+    
 }
 
 .row img {
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
 }
 
 @media only screen and (max-width: 1200px) and (orientation: landscape) {
