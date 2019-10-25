@@ -61,7 +61,7 @@
                     <p><a href="mailto:{{ topmail }}">{{ topmail }}</a></p></div>
                 <div class="flexmid" style="display:flex; justify-content:center;width: 27%;"><a href="https://goo.gl/maps/7P9VQXdCg9PSFPzcA"><img
                         src="{% static "/base/home.svg" %}"/>
-                    <p>{{ topul }}</p></a></div>
+                    <p id="address">{{ topul }}</p></a></div>
             </div>
         {% endif %}
     </div>
@@ -93,7 +93,7 @@
                     <div class="element"><span>{{ i.0 }}</span>
                     {% endif %}
             <div class="dropdown-content">
-                {% if i.0 == "Grupy" %}
+                {% if i.0 == "GRUPY" %}
                     {% for g in grupy %}
                         <div class="grupki">
                             <a>{{ g.0 }}</a>
@@ -140,7 +140,7 @@
             {% for i in nav %}
                 <div class="elementmo" ><span onclick="expandmenu({{ forloop.counter }})">{{ i.0 }}</span>
                     <div id="no{{ forloop.counter }}" class="dropdown-contentmo">
-                        {% if i.0 == "Grupy" %}
+                        {% if i.0 == "GRUPY" %}
                             {% for z in grupy %}
                              <div style="clear: both;padding-top: 1vh;font-weight: bold;font-family: 'Patrick Hand', cursive;" onclick="expandgroup({{ forloop.counter }})">{{ z.0 }}</div>
                                 <div id="grp{{ forloop.counter }}" style="display: none">

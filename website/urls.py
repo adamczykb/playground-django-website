@@ -9,5 +9,5 @@ urlpatterns = [
     path('site/<int:nr_site>',views.site,name="Strona"),
     path('grupy/<str:grupa>/aktualnosci/',views.grupaAktualnosci),
     path('grupy/<str:grupa>/galeria/',views.grupaGaleria),
-    path('event/<str:title>/',views.event,name="eventy"),
+    path('event/<int:title>/',views.event,name="eventy"),
 ]

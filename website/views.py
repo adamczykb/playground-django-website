@@ -175,7 +175,7 @@ def grupaGaleria(request, grupa):
 
 
 def event(request, title):
-    art=Aktualnosci.objects.filter(event=Event.objects.get(title=title))
+    art=Aktualnosci.objects.filter(event=Event.objects.get(id=title))
     if(art.__len__()==0 or art.__len__()>1):
         return index(request)
     else:
